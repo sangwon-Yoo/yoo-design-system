@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const ContainerRelative = styled.div`
+export const StyledContainerRelative = styled.div`
     position: relative;
 `;

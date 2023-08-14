@@ -64,7 +64,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     width: 100%;
-    background-color: ${props => props.theme.color.bg.secondary}; //블렉테마 등
   }
   /* -- Global */
   

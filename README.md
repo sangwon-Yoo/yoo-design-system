@@ -1,34 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## yoo-design-system
 
-## Getting Started
+### 설계구조
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Container, Layout, Wrapper, Contents 로 구성
+- Container 는 모듈의 시작을 알리는 부분으로 position : relative, fixed, sticky 중 하나이다.
+- Layout 은 flex, gird 로 작성
+- Wrapper 는 Contents 를 위한 height, width, margin, border, padding 을 담당
+- Contents 는 실제 기능을 하는 태그로 구성(p, span, button, img, div 등)하며 항상 full-width, full-height 를 가진다.
+- Wrapper 와 Layout 의 구성 순서는 상관없음(Wrapper > Layout > Layout > Wrapper, Layout > Wrapper > Wrapper 등)
+- Contents 는 항상 Wrapper 의 자식에 위치해야 한다.

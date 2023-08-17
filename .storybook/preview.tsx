@@ -1,23 +1,22 @@
-import type { Preview } from "@storybook/react";
-import { GlobalStyle } from "@/design-system/GlobalStyle";
+import type { Preview } from '@storybook/react';
+import { GlobalStyle } from '@/design-system/GlobalStyle';
+import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 
 const preview: Preview = {
-  parameters : {
-    actions : { argTypesRegex: "^on[A-Z].*" },
-    controls : {
-      matchers : {
-        color : /(background|color)$/i,
-        date : /Date$/,
+  parameters: {
+    actions: { argTypesRegex: '^on[A-Z].*' },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/,
       },
     },
   },
-  decorators : [
-      (Story) => (
-          <GlobalStyle>
-            {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
-            <Story />
-          </GlobalStyle>
-      ),
+  decorators: [
+    // Adds global styles and theme switching support.
+    withThemeFromJSXProvider({
+      GlobalStyle,
+    }),
   ],
 };
 

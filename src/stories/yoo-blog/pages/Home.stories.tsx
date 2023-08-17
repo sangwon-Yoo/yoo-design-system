@@ -13,4 +13,4 @@ export default meta;
 
 export const HomePC: StoryObj<typeof Home> = {
     render: () => <Home />
-}
+};

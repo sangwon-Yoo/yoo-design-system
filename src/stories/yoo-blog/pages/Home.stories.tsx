@@ -12,5 +12,5 @@ const meta = {
 export default meta;
 
 export const HomePC: StoryObj<typeof Home> = {
-    render: () => <button style={{height : '100px'}}>{}</button>
+    render: () => <Home />
 };

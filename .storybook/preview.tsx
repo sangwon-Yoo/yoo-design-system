@@ -11,11 +11,11 @@ const preview: Preview = {
       },
     },
   },
-  decorators : [
+  /*decorators : [
       withTh({
           GlobalStyles, // Adds your GlobalStyle component to all stories
       })
-  ],
+  ],*/
 };
 
 export default preview;

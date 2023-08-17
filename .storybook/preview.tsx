@@ -12,12 +12,9 @@ const preview: Preview = {
     },
   },
   decorators : [
-      (Story) => (
-          <GlobalStyle>
-            {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
-            <Story />
-          </GlobalStyle>
-      ),
+      withTh({
+          GlobalStyles, // Adds your GlobalStyle component to all stories
+      })
   ],
 };
 

@@ -13,7 +13,10 @@ export function Home() {
                 </StyledWrapper>
             </StyledLayoutFlexItem>
             <StyledLayoutFlexItem>
-                <StyledWrapper $styled={{ height : 'auto', margin : '0 10%' }}>
+                <StyledWrapper
+                    $styled={{ height : 'auto', margin : '0 10%' }}
+                    $styledMobile={{ height : 'auto', margin : '0' }}
+                >
                     <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
                         <StyledLayoutFlexItem>
                             <StyledWrapper $styled={{ height : '43px' }}>

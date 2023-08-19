@@ -1,19 +1,31 @@
 import styled from "styled-components";
+import { StyledProps } from "@/design-system/CommonType";
+import { isMobile } from "@/design-system/MediaQuery";
 
 
-type StyledLayoutFlexProps = {
+type StyledLayoutFlexProps = StyledProps<{
     flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
-};
+}>;
 export const StyledLayoutFlex = styled.div<StyledLayoutFlexProps>`
-  position: absolute;
   display: flex;
-  flex-direction: ${props => props.flexDirection || 'row'};
+  flex-direction: ${props => props.$styled?.flexDirection || 'row'};
+  
+  ${isMobile} {
+    flex-direction: ${
+        props => (
+            props.$styledMobile?.flexDirection || props.$styled?.flexDirection || 'row'
+        )
+    };
+  }
 `;
 
-type StyledLayoutFlexItemProps = {
+type StyledLayoutFlexItemProps = StyledProps<{
     flex?: string;
-};
+}>;
 export const StyledLayoutFlexItem = styled.div<StyledLayoutFlexItemProps>`
-  position: absolute;
-  flex: ${props => props.flex || '0 0 auto'};
+  flex: ${props => props.$styled?.flex || '0 0 auto'};
+  
+  ${isMobile} {
+    flex: ${props => props.$styledMobile?.flex || props.$styled?.flex || '0 0 auto'};
+  }
 `;

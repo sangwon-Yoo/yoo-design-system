@@ -74,8 +74,8 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 700;
     src: local('NotoSansKR-Bold'),  //로컬 디바이스에 해당 폰트가 있으면 쓰고, 없으면 아래 경로에서 순서대로 찾아서 적용한다.
     url('/font/NotoSansKR/NotoSansKR-Bold.woff2') format('woff2'),  //woff 의 버전업 버전
-    url('/font/NotoSansKR/NotoSansKR-Bold.woff') format('woff');    //otf, ttf 를 웹 전용으로 압축한 형태 w : web
-  url('/font/NotoSansKR/NotoSansKR-Bold.otf') format('opentype'); //raw 한 폰트. 용량이크다는 단점이 있다.
+    url('/font/NotoSansKR/NotoSansKR-Bold.woff') format('woff'),    //otf, ttf 를 웹 전용으로 압축한 형태 w : web
+    url('/font/NotoSansKR/NotoSansKR-Bold.otf') format('opentype'); //raw 한 폰트. 용량이크다는 단점이 있다.
   }
 
   @font-face {

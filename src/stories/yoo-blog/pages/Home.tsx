@@ -1,22 +1,46 @@
-import { StyledContainerRelative } from "@/design-system/module/Container";
 import { StyledLayoutFlex, StyledLayoutFlexItem } from "@/design-system/module/Layout";
 import { StyledWrapper } from "@/design-system/module/Wrapper";
+import { StyledContents } from "@/design-system/module/Contents";
 
 
 export function Home() {
 
     return (
-        <StyledContainerRelative id={'sdf'}>
-            <StyledLayoutFlex flexDirection={'column'}>
-                <StyledLayoutFlexItem>
-                    <StyledWrapper height={'5rem'} width={'100%'}>
-                        fsadsdfsdf
-                    </StyledWrapper>
-                </StyledLayoutFlexItem>
-                <StyledLayoutFlexItem>
-
-                </StyledLayoutFlexItem>
-            </StyledLayoutFlex>
-        </StyledContainerRelative>
+        <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
+            <StyledLayoutFlexItem>
+                <StyledWrapper $styled={{height : '600px'}} as={'main'}>
+                    <StyledContents $styled={{ backgroundImage : '/img/gradationBg.jpeg' }} />
+                </StyledWrapper>
+            </StyledLayoutFlexItem>
+            <StyledLayoutFlexItem>
+                <StyledWrapper
+                    $styled={{ height : 'auto', margin : '0 10%' }}
+                    $styledMobile={{ height : 'auto', margin : '0' }}
+                >
+                    <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
+                        <StyledLayoutFlexItem>
+                            <StyledWrapper $styled={{ height : '43px' }}>
+                                <StyledContents $styled={{ backgroundColor : '#333333' }}></StyledContents>
+                            </StyledWrapper>
+                        </StyledLayoutFlexItem>
+                        <StyledLayoutFlexItem>
+                            <StyledWrapper $styled={{ height : '225px' }}>
+                                <StyledContents $styled={{ backgroundColor : '#444444' }}></StyledContents>
+                            </StyledWrapper>
+                        </StyledLayoutFlexItem>
+                        <StyledLayoutFlexItem>
+                            <StyledWrapper $styled={{ height : '225px' }}>
+                                <StyledContents $styled={{ backgroundColor : '#555555' }}></StyledContents>
+                            </StyledWrapper>
+                        </StyledLayoutFlexItem>
+                        <StyledLayoutFlexItem>
+                            <StyledWrapper $styled={{ height : '225px' }}>
+                                <StyledContents $styled={{ backgroundColor : '#666666' }}></StyledContents>
+                            </StyledWrapper>
+                        </StyledLayoutFlexItem>
+                    </StyledLayoutFlex>
+                </StyledWrapper>
+            </StyledLayoutFlexItem>
+        </StyledLayoutFlex>
     );
 }

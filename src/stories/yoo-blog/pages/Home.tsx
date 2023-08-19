@@ -1,6 +1,6 @@
 import { StyledLayoutFlex, StyledLayoutFlexItem } from "@/design-system/module/Layout";
 import { StyledWrapper } from "@/design-system/module/Wrapper";
-import {StyledContents, StyledContentsWithBackgroundImage} from "@/design-system/module/Contents";
+import { StyledContents } from "@/design-system/module/Contents";
 
 
 export function Home() {
@@ -8,8 +8,8 @@ export function Home() {
     return (
         <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
             <StyledLayoutFlexItem>
-                <StyledWrapper $styled={{height : '600px'}}>
-                    <StyledContentsWithBackgroundImage $styled={{ backgroundImage : '/img/gradationBg.jpeg' }} />
+                <StyledWrapper $styled={{height : '600px'}} as={'main'}>
+                    <StyledContents $styled={{ backgroundImage : '/img/gradationBg.jpeg' }} />
                 </StyledWrapper>
             </StyledLayoutFlexItem>
             <StyledLayoutFlexItem>

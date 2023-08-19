@@ -1,11 +1,11 @@
 ## yoo-design-system
 
-### 설계구조
+### 설계규칙
 
-- Container, Layout, Wrapper, Contents 로 구성
-- Container 는 모듈의 시작을 알리는 부분으로 position : relative, fixed, sticky 중 하나이다.
-- Layout 은 flex, gird 로 작성
-- Wrapper 는 Contents 를 위한 height, width, margin, border, padding 을 담당
-- Contents 는 실제 기능을 하는 태그로 구성(p, span, button, img, div 등)하며 항상 full-width, full-height 를 가진다.
-- Wrapper 와 Layout 의 구성 순서는 상관없음(Wrapper > Layout > Layout > Wrapper, Layout > Wrapper > Wrapper 등)
-- Contents 는 항상 Wrapper 의 자식에 위치해야 한다.
+>Layout / Wrapper / Contents / Item
+- "마트료시카" 를 떠올린다
+- 네 종류 카테고리의 컴포넌트가 있다.
+- Layout 은 배치 구조를 만드는 컴포넌트로 Flex, Gird 를 쓴다.
+- Wrapper 는 Contents 를 감싸는 컴포넌트로 border, margin, padding 을 결정한다. position 은 static 이 아닌 다른 값을 사용한다.
+- Contents 는 실제 내용을 담는 컴포넌트로, height, width 는 100% 를 가진다.
+- Item 은 콘텐츠 하위 부속 컴포넌트이다.

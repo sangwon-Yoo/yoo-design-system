@@ -15,7 +15,7 @@ const preview: Preview = {
   decorators: [
     // Adds global styles and theme switching support.
     withThemeFromJSXProvider({
-      GlobalStyle,
+      GlobalStyles : GlobalStyle,
     }),
   ],
 };

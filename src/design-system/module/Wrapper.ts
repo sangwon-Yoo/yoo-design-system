@@ -7,7 +7,7 @@ type StyledWrapperProps = StyledProps<{
     position?: 'relative' | 'absolute' | 'sticky' | 'fixed';
     margin?: string;
     padding?: string;
-    height: string;
+    height?: string;
     width?: string;
 }>;
 export const StyledWrapper = styled.div<StyledWrapperProps>`
@@ -18,12 +18,10 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   width: ${props => props.$styled?.width};
   
   ${isMobile} {
-    position: ${
-        props => props.$styledMobile?.position || props.$styled?.position || 'relative'
-    };
-    margin: ${props => props.$styledMobile?.margin || props.$styled?.margin};
-    padding: ${props => props.$styledMobile?.padding || props.$styled?.padding};
-    height: ${props => props.$styledMobile?.height || props.$styled?.height};
-    width: ${props => props.$styledMobile?.width || props.$styled?.width};
+    position: ${props => props.$styledMobile?.position};
+    margin: ${props => props.$styledMobile?.margin};
+    padding: ${props => props.$styledMobile?.padding};
+    height: ${props => props.$styledMobile?.height};
+    width: ${props => props.$styledMobile?.width};
   }
 `;

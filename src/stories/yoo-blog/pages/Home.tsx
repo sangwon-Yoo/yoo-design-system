@@ -25,11 +25,27 @@ export function Home() {
                                         }}>
                                             {`Yoo's Blog`}
                                         </StyledItemParagraph>
-                                        <StyledItemParagraph
-                                            $styled={{ fontSize : '1rem', color : 'white', textAlign : 'center' }}
-                                        >
-                                            {`'공부하는 모든 것을 기록하자'`}
+                                        <StyledItemParagraph $styled={{
+                                            fontSize : '1rem', color : 'white', textAlign : 'center'
+                                        }}>
+                                            {`- 공부하는 것을 기록 -`}
                                         </StyledItemParagraph>
+                                        {/*<StyledLayoutFlex $styled={{
+                                            justifyContent : 'center'
+                                        }} $styledMobile={{
+                                            flexDirection : 'column'
+                                        }}>
+                                           <StyledLayoutFlexItem>
+                                               <StyledWrapper $styled={{
+                                                   height : '20px', width : '60px',
+                                               }}>
+
+                                               </StyledWrapper>
+                                           </StyledLayoutFlexItem>
+                                            <StyledLayoutFlexItem>
+
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>*/}
                                     </StyledContents>
                                 </StyledWrapper>
                             </StyledLayoutFlexItem>

@@ -39,7 +39,7 @@ export const StyledItemParagraph = styled.p<StyledItemParagraphProps>`
   margin-bottom: ${props => props.$styled?.marginBottom};
   padding: ${props => props.$styled?.padding};
   padding-top: ${props => props.$styled?.paddingTop};
-  padding-bottome: ${props => props.$styled?.paddingBottom};
+  padding-bottom: ${props => props.$styled?.paddingBottom};
   height: ${props => props.$styled?.height};
   width: ${props => props.$styled?.width};
   
@@ -52,7 +52,7 @@ export const StyledItemParagraph = styled.p<StyledItemParagraphProps>`
     margin-bottom: ${props => props.$styledMobile?.marginBottom};
     padding: ${props => props.$styledMobile?.padding};
     padding-top: ${props => props.$styledMobile?.paddingTop};
-    padding-bottome: ${props => props.$styledMobile?.paddingBottom};
+    padding-bottom: ${props => props.$styledMobile?.paddingBottom};
     height: ${props => props.$styledMobile?.height};
     width: ${props => props.$styledMobile?.width};
   }

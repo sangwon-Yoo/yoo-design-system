@@ -3,6 +3,7 @@ import { StyledProps } from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
+/* 레이아웃을 담당하는 컴포넌트  */
 type StyledLayoutFlexProps = StyledProps<{
     flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
     justifyContent?: 'flex-start;' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
@@ -15,8 +16,8 @@ export const StyledLayoutFlex = styled.div<StyledLayoutFlexProps>`
   flex-direction: ${props => props.$styled?.flexDirection};
   justify-content: ${props => props.$styled?.justifyContent};
   align-items: ${props => props.$styled?.alignItems};
-  height: ${props => props.$styled?.height};
-  width: ${props => props.$styled?.width};
+  height: ${props => props.$styled?.height || '100%'};
+  width: ${props => props.$styled?.width || '100%'};
   
   ${isMobile} {
     flex-direction: ${props => props.$styledMobile?.flexDirection};

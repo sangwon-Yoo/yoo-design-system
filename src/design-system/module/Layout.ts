@@ -3,7 +3,10 @@ import { CSSAlignItems, CSSFlexDirection, CSSJustifyContent, StyledProps } from 
 import { isMobile } from "@/design-system/MediaQuery";
 
 
-/* 레이아웃을 담당하는 컴포넌트  */
+/*
+    레이아웃을 담당하는 컴포넌트
+*/
+
 type StyledLayoutFlexProps = StyledProps<{
     flexDirection?: CSSFlexDirection;
     justifyContent?: CSSJustifyContent;
@@ -48,5 +51,34 @@ export const StyledLayoutFlexItem = styled.div<StyledLayoutFlexItemProps>`
     max-height: ${props => props.$styledMobile?.maxHeight};
     min-width: ${props => props.$styledMobile?.minWidth};
     max-width: ${props => props.$styledMobile?.maxWidth};
+  }
+`;
+
+type StyledLayoutGridProps = StyledProps<{
+    gridTemplateAreas: string;
+    gridTemplateColumns?: string;
+    gridTemplateRows?: string;
+}>;
+export const StyledLayoutGrid = styled.div<StyledLayoutGridProps>`
+  display: grid;
+  grid-template-areas: ${props => props.$styled?.gridTemplateAreas};
+  grid-template-rows: ${props => props.$styled?.gridTemplateRows};
+  grid-template-columns: ${props => props.$styled?.gridTemplateColumns};
+  
+  ${isMobile} {
+    grid-template-areas: ${props => props.$styledMobile?.gridTemplateAreas};
+    grid-template-rows: ${props => props.$styledMobile?.gridTemplateRows};
+    grid-template-columns: ${props => props.$styledMobile?.gridTemplateColumns};
+  }
+`;
+
+type StyledLayoutGridItemProps = StyledProps<{
+    gridArea: string;
+}>;
+export const StyledLayoutGridItem = styled.div<StyledLayoutGridItemProps>`
+  grid-area: ${props => props.$styled?.gridArea};
+  
+  ${isMobile} {
+    grid-area: ${props => props.$styledMobile?.gridArea};
   }
 `;

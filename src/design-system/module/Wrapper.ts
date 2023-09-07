@@ -3,7 +3,10 @@ import {CSSDisplay, CSSPosition, CSSTextAlign, StyledProps} from "@/design-syste
 import { isMobile } from "@/design-system/MediaQuery";
 
 
-/* 레퍼로서 콘텐츠 영역을 감싸고, 콘텐츠의 영역의 시작을 나타낸다. (position => non-static) */
+/*
+    레퍼로서 콘텐츠 영역을 감싸고, 콘텐츠의 영역의 시작을 나타낸다. (position => non-static)
+*/
+
 type StyledWrapperProps = StyledProps<{
     display?: CSSDisplay;
     position?: CSSPosition;

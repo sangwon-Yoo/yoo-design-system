@@ -10,7 +10,10 @@ import {
 import { isMobile } from "@/design-system/MediaQuery";
 
 
-/* 콘텐츠 영역으로 실제 구성요소가 들어가고 너비, 높이가 display block 엘리먼트에 한해서 필수값이다. */
+/*
+    콘텐츠 영역으로 실제 구성요소가 들어가고 너비, 높이가 display block 엘리먼트에 한해서 필수값이다.
+*/
+
 type StyledContentsProps = StyledProps<{
     height: string;
     width?: string;

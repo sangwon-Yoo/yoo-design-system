@@ -1,19 +1,19 @@
 import styled from "styled-components";
-import { StyledProps } from "@/design-system/CommonType";
+import { CSSAlignItems, CSSFlexDirection, CSSJustifyContent, StyledProps } from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
 /* 레이아웃을 담당하는 컴포넌트  */
 type StyledLayoutFlexProps = StyledProps<{
-    flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
-    justifyContent?: 'flex-start;' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
-    alignItems?: 'stretch' | 'flex-start' | 'flex-end' | 'center' | 'baseline';
+    flexDirection?: CSSFlexDirection;
+    justifyContent?: CSSJustifyContent;
+    alignItems?: CSSAlignItems;
     height?: string;
     width?: string;
 }>;
 export const StyledLayoutFlex = styled.div<StyledLayoutFlexProps>`
   display: flex;
-  flex-direction: ${props => props.$styled?.flexDirection};
+  flex-direction: ${props => props.$styled?.flexDirection || 'row'};
   justify-content: ${props => props.$styled?.justifyContent};
   align-items: ${props => props.$styled?.alignItems};
   height: ${props => props.$styled?.height || '100%'};
@@ -30,11 +30,23 @@ export const StyledLayoutFlex = styled.div<StyledLayoutFlexProps>`
 
 type StyledLayoutFlexItemProps = StyledProps<{
     flex?: string;
+    minHeight?: string;
+    maxHeight?: string;
+    minWidth?: string;
+    maxWidth?: string;
 }>;
 export const StyledLayoutFlexItem = styled.div<StyledLayoutFlexItemProps>`
   flex: ${props => props.$styled?.flex || '0 0 auto'};
+  min-height: ${props => props.$styled?.minHeight};
+  max-height: ${props => props.$styled?.maxHeight};
+  min-width: ${props => props.$styled?.minWidth};
+  max-width: ${props => props.$styled?.maxWidth};
   
   ${isMobile} {
     flex: ${props => props.$styledMobile?.flex};
+    min-height: ${props => props.$styledMobile?.minHeight};
+    max-height: ${props => props.$styledMobile?.maxHeight};
+    min-width: ${props => props.$styledMobile?.minWidth};
+    max-width: ${props => props.$styledMobile?.maxWidth};
   }
 `;

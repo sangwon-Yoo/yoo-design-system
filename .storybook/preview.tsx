@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/react';
-import { GlobalStyle } from '@/design-system/GlobalStyle';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
+import { GlobalStyle } from "../src/design-system/GlobalStyle";
 
 const preview: Preview = {
   parameters: {

@@ -22,7 +22,7 @@ const config: StorybookConfig = {
   },
   staticDirs: ['../src/stories/static'], // Configures the static asset folder in Storybook
   webpackFinal: async (config) => {
-    config.resolve.alias = {
+    if(config.resolve !== undefined) config.resolve.alias = {
       '@': path.resolve(__dirname, '../src/'),
     };
     return config;

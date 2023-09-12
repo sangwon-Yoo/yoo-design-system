@@ -12,3 +12,9 @@ export type CSSAlignItems = 'stretch' | 'flex-start' | 'flex-end' | 'center' | '
 export type CSSTextAlign = 'start' | 'end' | 'center' | 'justify';
 export type CSSTextOverflow = 'clip' | 'ellipsis';
 export type CSSWhiteSpace = 'normal' | 'nowrap' | 'pre' | 'pre-wrap' | 'pre-line' | 'break-spaces';
+export type CSSCursor = 'help' | 'wait' | 'crosshair' | 'not-allowed' | 'zoom-in' | 'grab' | 'pointer' | 'auto';
+
+export type Hovering = {
+    color?: string;
+    backgroundColor?: string;
+}

@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
 import {
+    CSSCursor,
     CSSDisplay,
-    CSSOverflow,
+    CSSOverflow, CSSPosition,
     CSSTextAlign,
     CSSTextOverflow,
-    CSSWhiteSpace,
+    CSSWhiteSpace, Hovering,
     StyledProps
 } from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
@@ -15,6 +16,7 @@ import { isMobile } from "@/design-system/MediaQuery";
 */
 
 type StyledContentsProps = StyledProps<{
+    position?: CSSPosition;
     height: string;
     width?: string;
     border?: string;
@@ -23,6 +25,7 @@ type StyledContentsProps = StyledProps<{
     backgroundImage?: string;
 }>;
 export const StyledContents = styled.div<StyledContentsProps>`
+  position: ${props => props.$styled?.position};
   width: ${props => props.$styled?.width || '100%'};
   height: ${props => props.$styled?.height};
   border: ${props => props.$styled?.border};
@@ -33,6 +36,7 @@ export const StyledContents = styled.div<StyledContentsProps>`
   };
   
   ${isMobile} {
+    position: ${props => props.$styledMobile?.position};
     width: ${props => props.$styledMobile?.width};
     height: ${props => props.$styledMobile?.height};
     border: ${props => props.$styledMobile?.border};
@@ -136,6 +140,9 @@ type StyledContentsAnchorProps = StyledProps<{
     textAlign?: CSSTextAlign;
     margin?: string;
     padding?: string;
+    cursor?: CSSCursor;
+    transition?: string;
+    hover?: Hovering;
 }>;
 export const StyledContentsAnchor = styled.a<StyledContentsAnchorProps>`
   display: ${props => props.$styled?.display};
@@ -151,6 +158,12 @@ export const StyledContentsAnchor = styled.a<StyledContentsAnchorProps>`
   text-align: ${props => props.$styled?.textAlign};
   margin: ${props => props.$styled?.margin};
   padding: ${props => props.$styled?.padding};
+  cursor: ${props => props.$styled?.cursor};
+  transition: ${props => props.$styled?.transition};
+  &:hover {
+    color: ${props => props.$styled?.hover?.color};
+    background-color: ${props => props.$styled?.hover?.backgroundColor};
+  }
   
   ${isMobile} {
     display: ${props => props.$styledMobile?.display};
@@ -166,5 +179,11 @@ export const StyledContentsAnchor = styled.a<StyledContentsAnchorProps>`
     text-align: ${props => props.$styledMobile?.textAlign};
     margin: ${props => props.$styledMobile?.margin};
     padding: ${props => props.$styledMobile?.padding};
+    cursor: ${props => props.$styledMobile?.cursor};
+    transition: ${props => props.$styledMobile?.transition};
+    &:hover {
+      color: ${props => props.$styledMobile?.hover?.color};
+      background-color: ${props => props.$styledMobile?.hover?.backgroundColor};
+    }
   }
 `;

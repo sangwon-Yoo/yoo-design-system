@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {CSSDisplay, CSSPosition, CSSTextAlign, StyledProps} from "@/design-system/CommonType";
+import { CSSDisplay, CSSPosition, CSSTextAlign, StyledProps } from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
@@ -10,6 +10,8 @@ import { isMobile } from "@/design-system/MediaQuery";
 type StyledWrapperProps = StyledProps<{
     display?: CSSDisplay;
     position?: CSSPosition;
+    height?: string;
+    width?: string;
     margin?: string;
     padding?: string;
     border?: string;
@@ -19,6 +21,8 @@ type StyledWrapperProps = StyledProps<{
 export const StyledWrapper = styled.div<StyledWrapperProps>`
   display: ${props => props.$styled?.display || 'block'};
   position: ${props => props.$styled?.position || 'relative'};
+  height: ${props => props.$styled?.height};
+  width: ${props => props.$styled?.width};
   margin: ${props => props.$styled?.margin};
   padding: ${props => props.$styled?.padding};
   border: ${props => props.$styled?.border};
@@ -29,6 +33,8 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
     display: ${props => props.$styledMobile?.display};
     position: ${props => props.$styledMobile?.position};
     margin: ${props => props.$styledMobile?.margin};
+    height: ${props => props.$styledMobile?.height};
+    width: ${props => props.$styledMobile?.width};
     padding: ${props => props.$styledMobile?.padding};
     border: ${props => props.$styledMobile?.border};
     border-bottom: ${props => props.$styledMobile?.borderBottom};

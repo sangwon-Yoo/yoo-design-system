@@ -16,7 +16,9 @@ type StyledWrapperProps = StyledProps<{
     padding?: string;
     border?: string;
     borderBottom?: string;
+    boxShadow?: string;
     textAlign?: CSSTextAlign;
+    zIndex?: number;
 }>;
 export const StyledWrapper = styled.div<StyledWrapperProps>`
   display: ${props => props.$styled?.display || 'block'};
@@ -27,7 +29,9 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   padding: ${props => props.$styled?.padding};
   border: ${props => props.$styled?.border};
   border-bottom: ${props => props.$styled?.borderBottom};
+  box-shadow: ${props => props.$styled?.boxShadow};
   text-align: ${props => props.$styled?.textAlign};
+  z-index: ${props => props.$styled?.zIndex};
   
   ${isMobile} {
     display: ${props => props.$styledMobile?.display};
@@ -38,6 +42,8 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
     padding: ${props => props.$styledMobile?.padding};
     border: ${props => props.$styledMobile?.border};
     border-bottom: ${props => props.$styledMobile?.borderBottom};
+    box-shadow: ${props => props.$styledMobile?.boxShadow};
     text-align: ${props => props.$styledMobile?.textAlign};
+    z-index: ${props => props.$styledMobile?.zIndex};
   }
 `;

@@ -22,6 +22,7 @@ type StyledContentsProps = StyledProps<{
     border?: string;
     borderRadius?: string;
     backgroundColor?: string;
+    opacity?: number;
     backgroundImage?: string;
 }>;
 export const StyledContents = styled.div<StyledContentsProps>`
@@ -31,6 +32,7 @@ export const StyledContents = styled.div<StyledContentsProps>`
   border: ${props => props.$styled?.border};
   border-radius: ${props => props.$styled?.borderRadius};
   background-color: ${props => props.$styled?.backgroundColor};
+  opacity: ${props => props.$styled?.opacity};
   background-image: ${
     props => props.$styled?.backgroundImage && css`url(${props.$styled.backgroundImage})`
   };
@@ -41,9 +43,8 @@ export const StyledContents = styled.div<StyledContentsProps>`
     height: ${props => props.$styledMobile?.height};
     border: ${props => props.$styledMobile?.border};
     border-radius: ${props => props.$styledMobile?.borderRadius};
-    background-color: ${
-        props => props.$styledMobile?.backgroundColor
-    };
+    background-color: ${props => props.$styledMobile?.backgroundColor};
+    opacity: ${props => props.$styledMobile?.opacity};
     background-image: ${
         props => (
             props.$styledMobile?.backgroundImage && css`url(${props.$styledMobile.backgroundImage})`
@@ -59,7 +60,7 @@ type StyledContentsSpanProps = StyledProps<{
 }>;
 export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
   font-size: ${props => props.$styled?.fontSize};
-  color: ${props => props.$styled?.color};
+  color: ${props => props.$styled?.color || props.theme.color.black};
   line-height: ${props => props.$styled?.lineHeight};
   
   ${isMobile} {
@@ -93,7 +94,7 @@ export const StyledContentsParagraph = styled.p<StyledContentsParagraphProps>`
   line-height: ${props => props.$styled?.lineHeight};
   font-size: ${props => props.$styled?.fontSize};
   font-weight: ${props => props.$styled?.fontWeight};
-  color: ${props => props.$styled?.color};
+  color: ${props => props.$styled?.color || props.theme.color.black};
   text-align: ${props => props.$styled?.textAlign};
   margin: ${props => props.$styled?.margin};
   margin-top: ${props => props.$styled?.marginTop};

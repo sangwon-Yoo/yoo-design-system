@@ -10,6 +10,10 @@ import {
     StyledContentsAnchor,
     StyledContentsParagraph,
 } from "@/design-system/module/Contents";
+import styled from "styled-components";
+import { Menu } from "styled-icons/remix-fill";
+import { PaperPlane } from "styled-icons/evaicons-solid";
+import { isMobile } from "@/design-system/MediaQuery";
 
 
 export function Home() {
@@ -33,36 +37,123 @@ export function Home() {
                     $styledMobile={{ height : '42px', backgroundColor : '#111111', opacity : 0.875 }}
                 >
                     <StyledLayoutFlex>
-                        <StyledLayoutFlexItem $styled={{ flex : '0 0 25%' }}>
-                            <StyledLayoutFlex
-                                $styled={{ flexDirection : 'row-reverse' }}
-                                $styledMobile={{ flexDirection : 'row' }}
-                            >
-                                <StyledLayoutFlexItem>
-
-                                </StyledLayoutFlexItem>
-                                <StyledLayoutFlexItem>
-
-                                </StyledLayoutFlexItem>
-                            </StyledLayoutFlex>
+                        <StyledLayoutFlexItem $styled={{ flex : '0 0 16%' }}>
+                            <StyledWrapper $styled={{ height : '100%', margin : '0 0 0 10px' }}>
+                                <StyledLayoutFlex
+                                    $styled={{ justifyContent : 'flex-end' }}
+                                    $styledMobile={{ justifyContent : 'flex-start' }}
+                                >
+                                    <StyledLayoutFlexItem>
+                                        <StyledLayoutFlex $styled={{
+                                            flexDirection : 'column', justifyContent : 'center'
+                                        }}>
+                                            <StyledLayoutFlexItem>
+                                                <StyledWrapper $styled={{ margin : '6px' }}>
+                                                    <StyledContentsAnchor
+                                                        $styled={{
+                                                            display : 'block',
+                                                            width : '36px',
+                                                            height : '36px',
+                                                            cursor : 'pointer',
+                                                        }}
+                                                        $styledMobile={{
+                                                            width : '32px',
+                                                            height : '32px'
+                                                        }}
+                                                    >
+                                                        <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
+                                                            height : '100%',
+                                                            width : '100%',
+                                                            objectFit : 'cover',
+                                                            borderRadius : '2px',
+                                                            boxShadow : '1px 1px 1px rgba(0,0,0,0.2)'
+                                                        }} />
+                                                    </StyledContentsAnchor>
+                                                </StyledWrapper>
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>
+                                    </StyledLayoutFlexItem>
+                                    <StyledLayoutFlexItem>
+                                        <StyledLayoutFlex $styled={{
+                                            flexDirection : 'column', justifyContent : 'center'
+                                        }}>
+                                            <StyledLayoutFlexItem>
+                                                <StyledWrapper $styled={{ margin : '6px' }}>
+                                                    <StyledContentsAnchor
+                                                        $styled={{
+                                                            display : 'block',
+                                                            padding : '7px',
+                                                            color : '#0ca8ac',
+                                                            cursor : 'pointer',
+                                                            borderRadius : '2px',
+                                                            transition : 'background-color .12s ease',
+                                                            hover : { backgroundColor : '#ececeb' }
+                                                        }}
+                                                        $styledMobile={{
+                                                            hover : { color : '#66f1e1', backgroundColor : 'unset' }
+                                                        }}
+                                                        onClick={() => console.log('dfsd')}
+                                                    >
+                                                        <StyledContentsIconMenu />
+                                                    </StyledContentsAnchor>
+                                                </StyledWrapper>
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>
+                                    </StyledLayoutFlexItem>
+                                </StyledLayoutFlex>
+                            </StyledWrapper>
                         </StyledLayoutFlexItem>
-                        <StyledLayoutFlexItem $styled={{ flex : '0 0 50%' }}>
+                        <StyledLayoutFlexItem $styled={{ flex : '0 1 68%' }}>
 
                         </StyledLayoutFlexItem>
-                        <StyledLayoutFlexItem $styled={{ flex : '0 0 25%' }}>
-                            <StyledLayoutFlex
-                                $styled={{ flexDirection : 'row' }}
-                                $styledMobile={{ flexDirection : 'row-reverse' }}
-                            >
-                                <StyledLayoutFlexItem>
-
-                                </StyledLayoutFlexItem>
-                                <StyledLayoutFlexItem>
-
-                                </StyledLayoutFlexItem>
-                            </StyledLayoutFlex>
+                        <StyledLayoutFlexItem $styled={{ flex : '0 0 16%' }}>
+                            <StyledWrapper $styled={{ height : '100%', margin : '0 10px 0 0' }}>
+                                <StyledLayoutFlex
+                                    $styled={{ justifyContent : 'flex-start' }}
+                                    $styledMobile={{ justifyContent : 'flex-end' }}
+                                >
+                                    <StyledLayoutFlexItem>
+                                        <StyledLayoutFlex $styled={{
+                                            flexDirection : 'column', justifyContent : 'center'
+                                        }}>
+                                            <StyledLayoutFlexItem>
+                                                <StyledWrapper $styled={{ margin : '6px' }}>
+                                                    <StyledContentsAnchor
+                                                        $styled={{
+                                                            display : 'block',
+                                                            padding : '7px',
+                                                            color : '#0ca8ac',
+                                                            cursor : 'pointer',
+                                                            borderRadius : '2px',
+                                                            transition : 'background-color .12s ease',
+                                                            hover : { backgroundColor : '#ececeb' }
+                                                        }}
+                                                        $styledMobile={{
+                                                            hover : { color : '#66f1e1', backgroundColor : 'unset' }
+                                                        }}
+                                                    >
+                                                        <StyledContentsIconPaperPlan />
+                                                    </StyledContentsAnchor>
+                                                </StyledWrapper>
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>
+                                    </StyledLayoutFlexItem>
+                                </StyledLayoutFlex>
+                            </StyledWrapper>
                         </StyledLayoutFlexItem>
                     </StyledLayoutFlex>
+                </StyledContents>
+            </StyledWrapper>
+
+            <StyledWrapper
+                $styled={{
+                    width : '100%', height : '100%',
+                    position : 'fixed',
+                    zIndex : 20,
+                }}
+            >
+                <StyledContents $styled={{ height : '100%', backgroundColor : 'rgba(0,0,0,0.4)' }}>
+
                 </StyledContents>
             </StyledWrapper>
 
@@ -249,7 +340,9 @@ export function Home() {
                                 </StyledWrapper>
                             </StyledLayoutFlexItem>
                             <StyledLayoutFlexItem>
-                                <StyledWrapper $styled={{ borderBottom : '1px solid #e6e6e6', padding : '20px 10px 2px 10px' }}>
+                                <StyledWrapper $styled={{
+                                    borderBottom : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
+                                }}>
                                     <StyledLayoutGrid $styled={{
                                         gridTemplateColumns : '72% 28%',
                                         gridTemplateAreas :
@@ -323,7 +416,9 @@ export function Home() {
                                 </StyledWrapper>
                             </StyledLayoutFlexItem>
                             <StyledLayoutFlexItem>
-                                <StyledWrapper $styled={{ borderBottom : '1px solid #e6e6e6', padding : '20px 10px 2px 10px' }}>
+                                <StyledWrapper $styled={{
+                                    borderBottom : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
+                                }}>
                                     <StyledLayoutGrid $styled={{
                                         gridTemplateColumns : '72% 28%',
                                         gridTemplateAreas :
@@ -401,6 +496,29 @@ export function Home() {
                 </StyledLayoutFlexItem>
             </StyledLayoutFlex>
         </>
-
     );
 }
+
+const StyledContentsIconMenu = styled(Menu)`
+  display: inherit;
+  color: inherit;
+  width: 22px;
+  height: 22px;
+
+  ${isMobile} {
+    width: 18px;
+    height: 18px;
+  }
+`;
+
+const StyledContentsIconPaperPlan = styled(PaperPlane)`
+  display: inherit;
+  color: inherit;
+  width: 22px;
+  height: 22px;
+
+  ${isMobile} {
+    width: 18px;
+    height: 18px;
+  }
+`;

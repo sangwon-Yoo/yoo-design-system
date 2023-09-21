@@ -188,3 +188,66 @@ export const StyledContentsAnchor = styled.a<StyledContentsAnchorProps>`
     }
   }
 `;
+
+
+type StyledContentsButtonProps = StyledProps<{
+    display?: CSSDisplay;
+    height?: string;
+    width?: string;
+    border?: string;
+    borderRadius?: string;
+    backgroundColor?: string;
+    lineHeight?: string;
+    fontSize?: string;
+    fontWeight?: string;
+    color?: string;
+    textAlign?: CSSTextAlign;
+    margin?: string;
+    padding?: string;
+    cursor?: CSSCursor;
+    transition?: string;
+    hover?: Hovering;
+}>;
+export const StyledContentsButton = styled.a<StyledContentsButtonProps>`
+  display: ${props => props.$styled?.display};
+  height: ${props => props.$styled?.height};
+  width: ${props => props.$styled?.width || '100%'};
+  border: ${props => props.$styled?.border};
+  border-radius: ${props => props.$styled?.borderRadius};
+  background-color: ${props => props.$styled?.backgroundColor};
+  line-height: ${props => props.$styled?.lineHeight};
+  font-size: ${props => props.$styled?.fontSize};
+  font-weight: ${props => props.$styled?.fontWeight};
+  color: ${props => props.$styled?.color};
+  text-align: ${props => props.$styled?.textAlign};
+  margin: ${props => props.$styled?.margin};
+  padding: ${props => props.$styled?.padding};
+  cursor: ${props => props.$styled?.cursor};
+  transition: ${props => props.$styled?.transition};
+  &:hover {
+    color: ${props => props.$styled?.hover?.color};
+    background-color: ${props => props.$styled?.hover?.backgroundColor};
+  }
+  
+  ${isMobile} {
+    display: ${props => props.$styledMobile?.display};
+    height: ${props => props.$styledMobile?.height};
+    width: ${props => props.$styledMobile?.width};
+    border: ${props => props.$styledMobile?.border};
+    border-radius: ${props => props.$styledMobile?.borderRadius};
+    background-color: ${props => props.$styledMobile?.backgroundColor};
+    line-height: ${props => props.$styledMobile?.lineHeight};
+    font-size: ${props => props.$styledMobile?.fontSize};
+    font-weight: ${props => props.$styledMobile?.fontWeight};
+    color: ${props => props.$styledMobile?.color};
+    text-align: ${props => props.$styledMobile?.textAlign};
+    margin: ${props => props.$styledMobile?.margin};
+    padding: ${props => props.$styledMobile?.padding};
+    cursor: ${props => props.$styledMobile?.cursor};
+    transition: ${props => props.$styledMobile?.transition};
+    &:hover {
+      color: ${props => props.$styledMobile?.hover?.color};
+      background-color: ${props => props.$styledMobile?.hover?.backgroundColor};
+    }
+  }
+`;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CSSDisplay, CSSPosition, CSSTextAlign, StyledProps } from "@/design-system/CommonType";
+import {CSSDisplay, CSSPosition, CSSTextAlign, CSSVerticalAlign, StyledProps} from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
@@ -18,6 +18,7 @@ type StyledWrapperProps = StyledProps<{
     borderBottom?: string;
     boxShadow?: string;
     textAlign?: CSSTextAlign;
+    verticalAlign?: CSSVerticalAlign;
     zIndex?: number;
 }>;
 export const StyledWrapper = styled.div<StyledWrapperProps>`
@@ -31,6 +32,7 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   border-bottom: ${props => props.$styled?.borderBottom};
   box-shadow: ${props => props.$styled?.boxShadow};
   text-align: ${props => props.$styled?.textAlign};
+  vertical-align: ${props => props.$styled?.verticalAlign};
   z-index: ${props => props.$styled?.zIndex};
   
   ${isMobile} {
@@ -44,6 +46,7 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
     border-bottom: ${props => props.$styledMobile?.borderBottom};
     box-shadow: ${props => props.$styledMobile?.boxShadow};
     text-align: ${props => props.$styledMobile?.textAlign};
+    vertical-align: ${props => props.$styledMobile?.verticalAlign};
     z-index: ${props => props.$styledMobile?.zIndex};
   }
 `;

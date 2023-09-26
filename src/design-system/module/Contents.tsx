@@ -4,7 +4,7 @@ import {
     CSSDisplay,
     CSSOverflow, CSSPosition,
     CSSTextAlign,
-    CSSTextOverflow,
+    CSSTextOverflow, CSSVerticalAlign,
     CSSWhiteSpace, Hovering,
     StyledProps
 } from "@/design-system/CommonType";
@@ -23,6 +23,8 @@ type StyledContentsProps = StyledProps<{
     borderRadius?: string;
     backgroundColor?: string;
     opacity?: number;
+    overflow?: CSSOverflow;
+    overflowY?: CSSOverflow;
     backgroundImage?: string;
 }>;
 export const StyledContents = styled.div<StyledContentsProps>`
@@ -33,6 +35,8 @@ export const StyledContents = styled.div<StyledContentsProps>`
   border-radius: ${props => props.$styled?.borderRadius};
   background-color: ${props => props.$styled?.backgroundColor};
   opacity: ${props => props.$styled?.opacity};
+  overflow: ${props => props.$styled?.overflow};
+  overflow-y: ${props => props.$styled?.overflowY};;
   background-image: ${
     props => props.$styled?.backgroundImage && css`url(${props.$styled.backgroundImage})`
   };
@@ -45,6 +49,8 @@ export const StyledContents = styled.div<StyledContentsProps>`
     border-radius: ${props => props.$styledMobile?.borderRadius};
     background-color: ${props => props.$styledMobile?.backgroundColor};
     opacity: ${props => props.$styledMobile?.opacity};
+    overflow: ${props => props.$styledMobile?.overflow};
+    overflow-y: ${props => props.$styledMobile?.overflowY};;
     background-image: ${
         props => (
             props.$styledMobile?.backgroundImage && css`url(${props.$styledMobile.backgroundImage})`
@@ -54,16 +60,25 @@ export const StyledContents = styled.div<StyledContentsProps>`
 `;
 
 type StyledContentsSpanProps = StyledProps<{
+    display?: CSSDisplay;
+    width?: string;
+    height?: string;
     fontSize?: string;
     color?: string;
     lineHeight?: string;
 }>;
 export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
+  display: ${props => props.$styled?.display};
+  width: ${props => props.$styled?.width};
+  height: ${props => props.$styled?.height};
   font-size: ${props => props.$styled?.fontSize};
   color: ${props => props.$styled?.color || props.theme.color.black};
   line-height: ${props => props.$styled?.lineHeight};
   
   ${isMobile} {
+    display: ${props => props.$styledMobile?.display};
+    width: ${props => props.$styledMobile?.width};
+    height: ${props => props.$styledMobile?.height};
     font-size: ${props => props.$styledMobile?.fontSize};
     color: ${props => props.$styledMobile?.color};
     line-height: ${props => props.$styledMobile?.lineHeight};
@@ -71,8 +86,8 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
 `;
 
 type StyledContentsParagraphProps = StyledProps<{
-    height: string;
     width?: string;
+    height: string;
     lineHeight?: string;
     fontSize?: string;
     fontWeight?: string;
@@ -89,8 +104,8 @@ type StyledContentsParagraphProps = StyledProps<{
     whiteSpace?: CSSWhiteSpace;
 }>;
 export const StyledContentsParagraph = styled.p<StyledContentsParagraphProps>`
-  height: ${props => props.$styled?.height};
   width: ${props => props.$styled?.width || '100%'};
+  height: ${props => props.$styled?.height};
   line-height: ${props => props.$styled?.lineHeight};
   font-size: ${props => props.$styled?.fontSize};
   font-weight: ${props => props.$styled?.fontWeight};
@@ -139,6 +154,7 @@ type StyledContentsAnchorProps = StyledProps<{
     fontWeight?: string;
     color?: string;
     textAlign?: CSSTextAlign;
+    verticalAlign?: CSSVerticalAlign;
     margin?: string;
     padding?: string;
     cursor?: CSSCursor;
@@ -157,6 +173,7 @@ export const StyledContentsAnchor = styled.a<StyledContentsAnchorProps>`
   font-weight: ${props => props.$styled?.fontWeight};
   color: ${props => props.$styled?.color};
   text-align: ${props => props.$styled?.textAlign};
+  vertical-align: ${props => props.$styled?.verticalAlign};
   margin: ${props => props.$styled?.margin};
   padding: ${props => props.$styled?.padding};
   cursor: ${props => props.$styled?.cursor};
@@ -177,7 +194,8 @@ export const StyledContentsAnchor = styled.a<StyledContentsAnchorProps>`
     font-size: ${props => props.$styledMobile?.fontSize};
     font-weight: ${props => props.$styledMobile?.fontWeight};
     color: ${props => props.$styledMobile?.color};
-    text-align: ${props => props.$styledMobile?.textAlign};
+    text-align: ${props => props.$styledMobile?.textAlign}
+    vertical-align: ${props => props.$styledMobile?.verticalAlign};;
     margin: ${props => props.$styledMobile?.margin};
     padding: ${props => props.$styledMobile?.padding};
     cursor: ${props => props.$styledMobile?.cursor};

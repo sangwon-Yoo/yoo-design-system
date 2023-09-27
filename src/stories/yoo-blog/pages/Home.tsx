@@ -13,6 +13,7 @@ import {
 import styled from "styled-components";
 import { Menu } from "styled-icons/remix-fill";
 import { PaperPlane } from "styled-icons/evaicons-solid";
+import { Edit } from "styled-icons/boxicons-solid";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
@@ -92,7 +93,6 @@ export function Home() {
                                                         $styledMobile={{
                                                             hover : { color : '#66f1e1', backgroundColor : 'unset' }
                                                         }}
-                                                        onClick={() => console.log('dfsd')}
                                                     >
                                                         <StyledContentsIconMenu />
                                                     </StyledContentsAnchor>
@@ -112,6 +112,32 @@ export function Home() {
                                     $styled={{ justifyContent : 'flex-start' }}
                                     $styledMobile={{ justifyContent : 'flex-end' }}
                                 >
+                                    <StyledLayoutFlexItem>
+                                        <StyledLayoutFlex $styled={{
+                                            flexDirection : 'column', justifyContent : 'center'
+                                        }}>
+                                            <StyledLayoutFlexItem>
+                                                <StyledWrapper $styled={{ margin : '6px' }}>
+                                                    <StyledContentsAnchor
+                                                        $styled={{
+                                                            display : 'block',
+                                                            padding : '7px',
+                                                            color : '#0ca8ac',
+                                                            cursor : 'pointer',
+                                                            borderRadius : '2px',
+                                                            transition : 'background-color .12s ease',
+                                                            hover : { backgroundColor : '#ececeb' }
+                                                        }}
+                                                        $styledMobile={{
+                                                            hover : { color : '#66f1e1', backgroundColor : 'unset' }
+                                                        }}
+                                                    >
+                                                        <StyledContentsIconEdit />
+                                                    </StyledContentsAnchor>
+                                                </StyledWrapper>
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>
+                                    </StyledLayoutFlexItem>
                                     <StyledLayoutFlexItem>
                                         <StyledLayoutFlex $styled={{
                                             flexDirection : 'column', justifyContent : 'center'
@@ -152,6 +178,7 @@ export function Home() {
                     position : 'fixed',
                     zIndex : 20,
                 }}
+                style={{display : "none"}}
             >
                 <StyledContents $styled={{ height : '100%', backgroundColor : 'rgba(0,0,0,0.4)' }}>
                     <StyledWrapper $styled={{ height : '100%' }}>
@@ -203,7 +230,7 @@ export function Home() {
                                                 fontSize : '1rem',
                                                 color : '#ffffff'
                                             }}>
-                                                Yoo's Blog
+                                                {`Yoo's Blog`}
                                             </StyledContentsSpan>
                                         </StyledWrapper>
                                     </StyledWrapper>
@@ -520,7 +547,10 @@ export function Home() {
                 </StyledContents>
             </StyledWrapper>
 
+
             <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
+
+                {/* ++ 메인 */}
                 <StyledLayoutFlexItem>
                     <StyledWrapper as={'main'}>
                         <StyledContents $styled={{
@@ -611,6 +641,9 @@ export function Home() {
                         </StyledContents>
                     </StyledWrapper>
                 </StyledLayoutFlexItem>
+                {/* -- 메인 */}
+
+                {/* ++ 최근작성한 내용 */}
                 <StyledLayoutFlexItem>
                     <StyledWrapper
                         $styled={{ margin : '0 10%' }}
@@ -780,7 +813,7 @@ export function Home() {
                             </StyledLayoutFlexItem>
                             <StyledLayoutFlexItem>
                                 <StyledWrapper $styled={{
-                                    borderBottom : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
+                                    padding : '20px 10px 2px 10px'
                                 }}>
                                     <StyledLayoutGrid $styled={{
                                         gridTemplateColumns : '72% 28%',
@@ -857,6 +890,60 @@ export function Home() {
                         </StyledLayoutFlex>
                     </StyledWrapper>
                 </StyledLayoutFlexItem>
+                {/* -- 최근작성한 내용 */}
+
+                {/* ++ footer */}
+                <StyledLayoutFlexItem>
+                    <StyledWrapper $styled={{ margin : '40px 0 0 0'}}>
+                        <StyledContents $styled={{ height : '120px', backgroundColor : '#F2F3F5', border : '1px solid #ececeb' }}>
+                            <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'flex-end' }}>
+                                <StyledLayoutFlexItem>
+                                    <StyledWrapper $styled={{
+                                        verticalAlign : 'middle',
+                                        width : '100px',
+                                        height : '36px',
+                                        textAlign : 'center'
+                                    }}>
+                                        <StyledContentsAnchor
+                                            $styled={{
+                                                display : 'inline-block',
+                                                verticalAlign : 'middle',
+                                                width : '36px',
+                                                height : '100%',
+                                                cursor : 'pointer',
+                                            }}
+                                        >
+                                            <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
+                                                height : '100%',
+                                                width : '100%',
+                                                objectFit : 'cover',
+                                            }} />
+                                        </StyledContentsAnchor>
+                                    </StyledWrapper>
+
+                                    <StyledWrapper $styled={{
+                                        width : '100px',
+                                        height : '36px',
+                                        margin : '0 0 10px 0'
+                                    }}>
+                                        <StyledContentsSpan $styled={{
+                                            display : 'inline-block',
+                                            width : '100%',
+                                            height : '36px',
+                                            textAlign : 'center',
+                                            lineHeight : '36px',
+                                            fontSize : '1rem',
+                                            color : '#00000066',
+                                        }}>
+                                            {`Yoo's Blog`}
+                                        </StyledContentsSpan>
+                                    </StyledWrapper>
+                                </StyledLayoutFlexItem>
+                            </StyledLayoutFlex>
+                        </StyledContents>
+                    </StyledWrapper>
+                </StyledLayoutFlexItem>
+                {/* -- footer */}
             </StyledLayoutFlex>
         </>
     );
@@ -875,6 +962,18 @@ const StyledContentsIconMenu = styled(Menu)`
 `;
 
 const StyledContentsIconPaperPlan = styled(PaperPlane)`
+  display: inherit;
+  color: inherit;
+  width: 22px;
+  height: 22px;
+
+  ${isMobile} {
+    width: 18px;
+    height: 18px;
+  }
+`;
+
+const StyledContentsIconEdit = styled(Edit)`
   display: inherit;
   color: inherit;
   width: 22px;

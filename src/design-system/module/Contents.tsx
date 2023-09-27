@@ -63,6 +63,7 @@ type StyledContentsSpanProps = StyledProps<{
     display?: CSSDisplay;
     width?: string;
     height?: string;
+    textAlign?: CSSTextAlign;
     fontSize?: string;
     color?: string;
     lineHeight?: string;
@@ -71,6 +72,7 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
   display: ${props => props.$styled?.display};
   width: ${props => props.$styled?.width};
   height: ${props => props.$styled?.height};
+  text-align: ${props => props.$styled?.textAlign};
   font-size: ${props => props.$styled?.fontSize};
   color: ${props => props.$styled?.color || props.theme.color.black};
   line-height: ${props => props.$styled?.lineHeight};
@@ -79,6 +81,7 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
     display: ${props => props.$styledMobile?.display};
     width: ${props => props.$styledMobile?.width};
     height: ${props => props.$styledMobile?.height};
+    text-align: ${props => props.$styledMobile?.textAlign};
     font-size: ${props => props.$styledMobile?.fontSize};
     color: ${props => props.$styledMobile?.color};
     line-height: ${props => props.$styledMobile?.lineHeight};

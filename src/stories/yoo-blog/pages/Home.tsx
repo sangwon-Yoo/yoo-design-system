@@ -26,7 +26,7 @@ export function Home() {
                     width : '100%',
                     position : 'fixed',
                     zIndex : 10,
-                    boxShadow : '0px 2px 4px rgba(0,0,0,0.2)',
+                    boxShadow : '0px 1px 3px rgba(0,0,0,0.2)',
                     borderBottom : '1px solid #DDDDDD'
                 }}
                 $styledMobile={{
@@ -593,7 +593,7 @@ export function Home() {
                                                     display : 'inline-block',
                                                     width : '143px',
                                                     height : '43px',
-                                                    lineHeight : '43px',
+                                                    lineHeight : '39px',
                                                     fontSize : '1rem',
                                                     margin : '4px',
                                                     border : '2px solid #ffffff',
@@ -603,7 +603,7 @@ export function Home() {
                                                     cursor : 'pointer',
                                                     transition : 'background-color .12s ease',
                                                     hover : {
-                                                        color : '#000000',
+                                                        color : '#292929',
                                                         backgroundColor : '#ffffff'
                                                     }
                                                 }}>
@@ -617,7 +617,7 @@ export function Home() {
                                                     display : 'inline-block',
                                                     width : '143px',
                                                     height : '43px',
-                                                    lineHeight : '43px',
+                                                    lineHeight : '39px',
                                                     fontSize : '1rem',
                                                     margin : '4px',
                                                     border : '2px solid #ffffff',
@@ -627,7 +627,7 @@ export function Home() {
                                                     cursor : 'pointer',
                                                     transition : 'background-color .12s ease',
                                                     hover : {
-                                                        color : '#000000',
+                                                        color : '#292929',
                                                         backgroundColor : '#ffffff'
                                                     }
                                                 }}>
@@ -895,7 +895,7 @@ export function Home() {
                 {/* ++ footer */}
                 <StyledLayoutFlexItem>
                     <StyledWrapper $styled={{ margin : '40px 0 0 0'}}>
-                        <StyledContents $styled={{ height : '120px', backgroundColor : '#F2F3F5', border : '1px solid #ececeb' }}>
+                        <StyledContents $styled={{ height : '120px', borderTop : '1px solid #e6e6e6' }}>
                             <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'flex-end' }}>
                                 <StyledLayoutFlexItem>
                                     <StyledWrapper $styled={{
@@ -933,9 +933,9 @@ export function Home() {
                                             textAlign : 'center',
                                             lineHeight : '36px',
                                             fontSize : '1rem',
-                                            color : '#00000066',
+                                            color : '#bdc3c7',
                                         }}>
-                                            {`Yoo's Blog`}
+                                            {`© Yoo's Blog`}
                                         </StyledContentsSpan>
                                     </StyledWrapper>
                                 </StyledLayoutFlexItem>

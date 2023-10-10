@@ -12,6 +12,8 @@ type StyledWrapperProps = StyledProps<{
     position?: CSSPosition;
     height?: string;
     width?: string;
+    top?: string;
+    bottom?: string;
     margin?: string;
     padding?: string;
     border?: string;
@@ -26,6 +28,8 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   position: ${props => props.$styled?.position || 'relative'};
   height: ${props => props.$styled?.height};
   width: ${props => props.$styled?.width};
+  top: ${props => props.$styled?.top};
+  bottom: ${props => props.$styled?.bottom};
   margin: ${props => props.$styled?.margin};
   padding: ${props => props.$styled?.padding};
   border: ${props => props.$styled?.border};
@@ -38,9 +42,11 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   ${isMobile} {
     display: ${props => props.$styledMobile?.display};
     position: ${props => props.$styledMobile?.position};
-    margin: ${props => props.$styledMobile?.margin};
     height: ${props => props.$styledMobile?.height};
     width: ${props => props.$styledMobile?.width};
+    top: ${props => props.$styledMobile?.top};
+    bottom: ${props => props.$styledMobile?.bottom};
+    margin: ${props => props.$styledMobile?.margin};
     padding: ${props => props.$styledMobile?.padding};
     border: ${props => props.$styledMobile?.border};
     border-bottom: ${props => props.$styledMobile?.borderBottom};

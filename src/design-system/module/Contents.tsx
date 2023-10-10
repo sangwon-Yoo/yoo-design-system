@@ -17,9 +17,11 @@ import { isMobile } from "@/design-system/MediaQuery";
 
 type StyledContentsProps = StyledProps<{
     position?: CSSPosition;
-    height: string;
     width?: string;
+    height: string;
+    lineHeight?: string;
     border?: string;
+    borderTop?: string;
     borderRadius?: string;
     backgroundColor?: string;
     opacity?: number;
@@ -31,7 +33,9 @@ export const StyledContents = styled.div<StyledContentsProps>`
   position: ${props => props.$styled?.position};
   width: ${props => props.$styled?.width || '100%'};
   height: ${props => props.$styled?.height};
+  line-height: ${props => props.$styled?.lineHeight};
   border: ${props => props.$styled?.border};
+  border-top: ${props => props.$styled?.borderTop};
   border-radius: ${props => props.$styled?.borderRadius};
   background-color: ${props => props.$styled?.backgroundColor};
   opacity: ${props => props.$styled?.opacity};
@@ -45,7 +49,9 @@ export const StyledContents = styled.div<StyledContentsProps>`
     position: ${props => props.$styledMobile?.position};
     width: ${props => props.$styledMobile?.width};
     height: ${props => props.$styledMobile?.height};
+    line-height: ${props => props.$styledMobile?.lineHeight};
     border: ${props => props.$styledMobile?.border};
+    border-top: ${props => props.$styledMobile?.borderTop};
     border-radius: ${props => props.$styledMobile?.borderRadius};
     background-color: ${props => props.$styledMobile?.backgroundColor};
     opacity: ${props => props.$styledMobile?.opacity};
@@ -67,6 +73,7 @@ type StyledContentsSpanProps = StyledProps<{
     fontSize?: string;
     color?: string;
     lineHeight?: string;
+    verticalAlign?: CSSVerticalAlign;
 }>;
 export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
   display: ${props => props.$styled?.display};
@@ -76,6 +83,7 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
   font-size: ${props => props.$styled?.fontSize};
   color: ${props => props.$styled?.color || props.theme.color.black};
   line-height: ${props => props.$styled?.lineHeight};
+  vertical-align: ${props => props.$styled?.verticalAlign};
   
   ${isMobile} {
     display: ${props => props.$styledMobile?.display};
@@ -85,6 +93,7 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
     font-size: ${props => props.$styledMobile?.fontSize};
     color: ${props => props.$styledMobile?.color};
     line-height: ${props => props.$styledMobile?.lineHeight};
+    vertical-align: ${props => props.$styledMobile?.verticalAlign};
   }
 `;
 

@@ -8,7 +8,7 @@ import { Edit } from "styled-icons/boxicons-solid";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
-export function Login() {
+export function Contents() {
 
     return (
         <>
@@ -162,97 +162,60 @@ export function Login() {
                 </StyledContents>
             </StyledWrapper>
 
-
-            <StyledContents $styled={{ width : '100%', height : '720px' }}>
-                <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'center' }}>
-                    <StyledWrapper $styled={{ textAlign : 'center' }}>
-                        <StyledContentsAnchor $styled={{
-                            display : 'inline-block',
-                            width : '316px',
-                            height : '38px',
-                            lineHeight : '36px',
-                            fontSize : '1rem',
-                            margin : '4px',
-                            border : '1px solid #bdc3c7',
-                            borderRadius : '4px',
-                            color : '#292929',
-                            cursor : 'pointer',
-                            transition : 'background-color .12s ease',
-                            hover : {
-                                color : '#292929',
-                                backgroundColor : '#f2f3f5'
-                            }
-                        }}>
-                            <StyledWrapper $styled={{ margin : '2px' }}>
-                                <StyledContents $styled={{ height : '32px', lineHeight : '32px' }}>
-                                    <img src={'/img/googleLogo.png'} style={{
-                                        display: 'inline-block',
-                                        width : '32px',
-                                        height : '32px',
-                                        verticalAlign : 'top'
-                                    }} />
-                                    <StyledContentsSpan $styled={{
-                                        display : 'inline-block',
-                                        height : '32px',
-                                        verticalAlign : 'top'
-                                    }}>
-                                        {`구글로 로그인`}
-                                    </StyledContentsSpan>
-                                </StyledContents>
-                            </StyledWrapper>
-                        </StyledContentsAnchor>
-                    </StyledWrapper>
-                </StyledLayoutFlex>
-            </StyledContents>
-
-            <StyledWrapper $styled={{ position : 'fixed', width : '100%', bottom : '0', margin : '40px 0 0 0' }}>
-                <StyledContents $styled={{ height : '120px', borderTop : '1px solid #e6e6e6' }}>
-                    <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'flex-end' }}>
-                        <StyledLayoutFlexItem>
-                            <StyledWrapper $styled={{
-                                verticalAlign : 'middle',
-                                width : '100px',
-                                height : '36px',
-                                textAlign : 'center'
-                            }}>
-                                <StyledContentsAnchor
-                                    $styled={{
-                                        display : 'inline-block',
+            <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
+                <StyledLayoutFlexItem>
+                    {/* ++ footer */}
+                    <StyledWrapper $styled={{ margin : '40px 0 0 0' }}>
+                        <StyledContents $styled={{ height : '120px', borderTop : '1px solid #e6e6e6' }}>
+                            <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'flex-end' }}>
+                                <StyledLayoutFlexItem>
+                                    <StyledWrapper $styled={{
                                         verticalAlign : 'middle',
-                                        width : '36px',
-                                        height : '100%',
-                                        cursor : 'pointer',
-                                    }}
-                                >
-                                    <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
-                                        height : '100%',
-                                        width : '100%',
-                                        objectFit : 'cover',
-                                    }} />
-                                </StyledContentsAnchor>
-                            </StyledWrapper>
+                                        width : '100px',
+                                        height : '36px',
+                                        textAlign : 'center'
+                                    }}>
+                                        <StyledContentsAnchor
+                                            $styled={{
+                                                display : 'inline-block',
+                                                verticalAlign : 'middle',
+                                                width : '36px',
+                                                height : '100%',
+                                                cursor : 'pointer',
+                                            }}
+                                        >
+                                            <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
+                                                height : '100%',
+                                                width : '100%',
+                                                objectFit : 'cover',
+                                            }} />
+                                        </StyledContentsAnchor>
+                                    </StyledWrapper>
 
-                            <StyledWrapper $styled={{
-                                width : '100px',
-                                height : '36px',
-                                margin : '0 0 10px 0'
-                            }}>
-                                <StyledContentsSpan $styled={{
-                                    display : 'inline-block',
-                                    width : '100%',
-                                    height : '36px',
-                                    textAlign : 'center',
-                                    lineHeight : '36px',
-                                    fontSize : '1rem',
-                                    color : '#bdc3c7',
-                                }}>
-                                    {`© Yoo's Blog`}
-                                </StyledContentsSpan>
-                            </StyledWrapper>
-                        </StyledLayoutFlexItem>
-                    </StyledLayoutFlex>
-                </StyledContents>
-            </StyledWrapper>
+                                    <StyledWrapper $styled={{
+                                        width : '100px',
+                                        height : '36px',
+                                        margin : '0 0 10px 0'
+                                    }}>
+                                        <StyledContentsSpan $styled={{
+                                            display : 'inline-block',
+                                            width : '100%',
+                                            height : '36px',
+                                            textAlign : 'center',
+                                            lineHeight : '36px',
+                                            fontSize : '1rem',
+                                            color : '#bdc3c7',
+                                        }}>
+                                            {`© Yoo's Blog`}
+                                        </StyledContentsSpan>
+                                    </StyledWrapper>
+                                </StyledLayoutFlexItem>
+                            </StyledLayoutFlex>
+                        </StyledContents>
+                    </StyledWrapper>
+                    {/* -- footer */}
+                </StyledLayoutFlexItem>
+            </StyledLayoutFlex>
         </>
     );
 }

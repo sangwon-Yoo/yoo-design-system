@@ -8,7 +8,8 @@ import { StyledWrapper } from "@/design-system/module/Wrapper";
 import {
     StyledContents,
     StyledContentsAnchor,
-    StyledContentsParagraph, StyledContentsSpan,
+    StyledContentsParagraph,
+    StyledContentsSpan,
 } from "@/design-system/module/Contents";
 import styled from "styled-components";
 import { Menu } from "styled-icons/remix-fill";
@@ -892,9 +893,9 @@ export function Home() {
                 </StyledLayoutFlexItem>
                 {/* -- 최근작성한 내용 */}
 
-                {/* ++ footer */}
                 <StyledLayoutFlexItem>
-                    <StyledWrapper $styled={{ margin : '40px 0 0 0'}}>
+                    {/* ++ footer */}
+                    <StyledWrapper $styled={{ margin : '40px 0 0 0' }}>
                         <StyledContents $styled={{ height : '120px', borderTop : '1px solid #e6e6e6' }}>
                             <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'flex-end' }}>
                                 <StyledLayoutFlexItem>
@@ -942,8 +943,8 @@ export function Home() {
                             </StyledLayoutFlex>
                         </StyledContents>
                     </StyledWrapper>
+                    {/* -- footer */}
                 </StyledLayoutFlexItem>
-                {/* -- footer */}
             </StyledLayoutFlex>
         </>
     );

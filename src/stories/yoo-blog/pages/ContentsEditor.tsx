@@ -8,7 +8,7 @@ import { Edit } from "styled-icons/boxicons-solid";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
-export function Login() {
+export function ContentsEditor() {
 
     return (
         <>

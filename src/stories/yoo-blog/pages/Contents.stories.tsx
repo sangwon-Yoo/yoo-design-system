@@ -11,6 +11,6 @@ const meta = {
 } satisfies Meta<typeof Contents>
 export default meta;
 
-export const PageLogin: StoryObj<typeof Contents> = {
+export const PageContents: StoryObj<typeof Contents> = {
     render: () => <Contents />
 };

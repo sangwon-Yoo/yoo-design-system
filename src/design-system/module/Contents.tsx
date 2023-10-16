@@ -1,12 +1,9 @@
 import styled, { css } from "styled-components";
 import {
-    CSSCursor,
-    CSSDisplay,
-    CSSOverflow, CSSPosition,
-    CSSTextAlign,
-    CSSTextOverflow, CSSVerticalAlign,
-    CSSWhiteSpace, Hovering,
-    StyledProps
+    CSSCursor, CSSDisplay, CSSFontWeight,
+    CSSOverflow, CSSPosition, CSSTextAlign,
+    CSSTextOverflow, CSSVerticalAlign, CSSWhiteSpace,
+    Hovering, StyledProps
 } from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
 
@@ -17,6 +14,7 @@ import { isMobile } from "@/design-system/MediaQuery";
 
 type StyledContentsProps = StyledProps<{
     position?: CSSPosition;
+    display?: CSSDisplay;
     width?: string;
     height: string;
     lineHeight?: string;
@@ -31,6 +29,7 @@ type StyledContentsProps = StyledProps<{
 }>;
 export const StyledContents = styled.div<StyledContentsProps>`
   position: ${props => props.$styled?.position};
+  display: ${props => props.$styled?.display};
   width: ${props => props.$styled?.width || '100%'};
   height: ${props => props.$styled?.height};
   line-height: ${props => props.$styled?.lineHeight};
@@ -47,6 +46,7 @@ export const StyledContents = styled.div<StyledContentsProps>`
   
   ${isMobile} {
     position: ${props => props.$styledMobile?.position};
+    display: ${props => props.$styledMobile?.display};
     width: ${props => props.$styledMobile?.width};
     height: ${props => props.$styledMobile?.height};
     line-height: ${props => props.$styledMobile?.lineHeight};
@@ -69,6 +69,9 @@ type StyledContentsSpanProps = StyledProps<{
     display?: CSSDisplay;
     width?: string;
     height?: string;
+    borderTop?: string;
+    borderRadius?: string;
+    backgroundColor?: string;
     textAlign?: CSSTextAlign;
     fontSize?: string;
     color?: string;
@@ -97,12 +100,13 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
   }
 `;
 
+
 type StyledContentsParagraphProps = StyledProps<{
     width?: string;
     height: string;
     lineHeight?: string;
     fontSize?: string;
-    fontWeight?: string;
+    fontWeight?: CSSFontWeight;
     color?: string;
     textAlign?: CSSTextAlign;
     margin?: string;
@@ -163,7 +167,7 @@ type StyledContentsAnchorProps = StyledProps<{
     backgroundColor?: string;
     lineHeight?: string;
     fontSize?: string;
-    fontWeight?: string;
+    fontWeight?: CSSFontWeight;
     color?: string;
     textAlign?: CSSTextAlign;
     verticalAlign?: CSSVerticalAlign;
@@ -229,7 +233,7 @@ type StyledContentsButtonProps = StyledProps<{
     backgroundColor?: string;
     lineHeight?: string;
     fontSize?: string;
-    fontWeight?: string;
+    fontWeight?: CSSFontWeight;
     color?: string;
     textAlign?: CSSTextAlign;
     margin?: string;

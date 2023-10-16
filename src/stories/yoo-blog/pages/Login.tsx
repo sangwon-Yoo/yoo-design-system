@@ -163,12 +163,12 @@ export function Login() {
             </StyledWrapper>
 
 
-            <StyledContents $styled={{ width : '100%', height : '720px' }}>
+            <StyledContents $styled={{ width : '100%', height : '630px' }}>
                 <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'center' }}>
                     <StyledWrapper $styled={{ textAlign : 'center' }}>
                         <StyledContentsAnchor $styled={{
                             display : 'inline-block',
-                            width : '316px',
+                            width : '276px',
                             height : '38px',
                             lineHeight : '36px',
                             fontSize : '1rem',

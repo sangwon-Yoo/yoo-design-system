@@ -9,9 +9,9 @@ import {
 import styled from "styled-components";
 import { Menu } from "styled-icons/remix-fill";
 import { PaperPlane } from "styled-icons/evaicons-solid";
+import { Copy } from "styled-icons/boxicons-regular";
 import { Edit } from "styled-icons/boxicons-solid";
 import { isMobile } from "@/design-system/MediaQuery";
-import {Copy} from "@styled-icons/boxicons-regular";
 
 
 export function Contents() {

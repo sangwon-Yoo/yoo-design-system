@@ -65,13 +65,20 @@ export const StyledContents = styled.div<StyledContentsProps>`
   }
 `;
 
+
 type StyledContentsSpanProps = StyledProps<{
     display?: CSSDisplay;
     width?: string;
     height?: string;
-    borderTop?: string;
+    border?: string;
     borderRadius?: string;
     backgroundColor?: string;
+    margin?: string;
+    marginTop?: string;
+    marginBottom?: string;
+    padding?: string;
+    paddingTop?: string;
+    paddingBottom?: string;
     textAlign?: CSSTextAlign;
     fontSize?: string;
     color?: string;
@@ -82,6 +89,15 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
   display: ${props => props.$styled?.display};
   width: ${props => props.$styled?.width};
   height: ${props => props.$styled?.height};
+  border: ${props => props.$styled?.border};
+  border-radius: ${props => props.$styled?.borderRadius};
+  background-color: ${props => props.$styled?.backgroundColor};
+  margin: ${props => props.$styled?.margin};
+  margin-top: ${props => props.$styled?.marginTop};
+  margin-bottom: ${props => props.$styled?.marginBottom};
+  padding: ${props => props.$styled?.padding};
+  padding-top: ${props => props.$styled?.paddingTop};
+  padding-bottom: ${props => props.$styled?.paddingBottom};
   text-align: ${props => props.$styled?.textAlign};
   font-size: ${props => props.$styled?.fontSize};
   color: ${props => props.$styled?.color || props.theme.color.black};
@@ -92,6 +108,15 @@ export const StyledContentsSpan = styled.span<StyledContentsSpanProps>`
     display: ${props => props.$styledMobile?.display};
     width: ${props => props.$styledMobile?.width};
     height: ${props => props.$styledMobile?.height};
+    border: ${props => props.$styledMobile?.border};
+    border-radius: ${props => props.$styledMobile?.borderRadius};
+    background-color: ${props => props.$styledMobile?.backgroundColor};
+    margin: ${props => props.$styledMobile?.margin};
+    margin-top: ${props => props.$styledMobile?.marginTop};
+    margin-bottom: ${props => props.$styledMobile?.marginBottom};
+    padding: ${props => props.$styledMobile?.padding};
+    padding-top: ${props => props.$styledMobile?.paddingTop};
+    padding-bottom: ${props => props.$styledMobile?.paddingBottom};
     text-align: ${props => props.$styledMobile?.textAlign};
     font-size: ${props => props.$styledMobile?.fontSize};
     color: ${props => props.$styledMobile?.color};

@@ -18,6 +18,7 @@ type StyledWrapperProps = StyledProps<{
     padding?: string;
     border?: string;
     borderBottom?: string;
+    borderTop?: string;
     boxShadow?: string;
     textAlign?: CSSTextAlign;
     verticalAlign?: CSSVerticalAlign;
@@ -34,6 +35,7 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   padding: ${props => props.$styled?.padding};
   border: ${props => props.$styled?.border};
   border-bottom: ${props => props.$styled?.borderBottom};
+  border-top: ${props => props.$styled?.borderTop};
   box-shadow: ${props => props.$styled?.boxShadow};
   text-align: ${props => props.$styled?.textAlign};
   vertical-align: ${props => props.$styled?.verticalAlign};
@@ -50,6 +52,7 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
     padding: ${props => props.$styledMobile?.padding};
     border: ${props => props.$styledMobile?.border};
     border-bottom: ${props => props.$styledMobile?.borderBottom};
+    border-top: ${props => props.$styledMobile?.borderTop};
     box-shadow: ${props => props.$styledMobile?.boxShadow};
     text-align: ${props => props.$styledMobile?.textAlign};
     vertical-align: ${props => props.$styledMobile?.verticalAlign};

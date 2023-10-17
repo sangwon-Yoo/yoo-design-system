@@ -648,7 +648,7 @@ export function Home() {
             >
                 <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
                     <StyledLayoutFlexItem>
-                        <StyledWrapper $styled={{ borderBottom : '1px solid #e6e6e6', padding : '10px' }}>
+                        <StyledWrapper $styled={{ padding : '10px' }}>
                             <StyledContentsParagraph $styled={{
                                 height : '23px',
                                 lineHeight : '23px',
@@ -660,8 +660,7 @@ export function Home() {
                     </StyledLayoutFlexItem>
                     <StyledLayoutFlexItem>
                         <StyledWrapper $styled={{
-                            borderBottom : '1px solid #e6e6e6',
-                            padding : '20px 10px 2px 10px'
+                            borderTop : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
                         }}>
                             <StyledLayoutGrid $styled={{
                                 gridTemplateColumns : '72% 28%',
@@ -721,15 +720,18 @@ export function Home() {
                                     </StyledWrapper>
                                 </StyledLayoutGridItem>
                                 <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
+                                    <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
+                                        <StyledContentsSpan $styled={{
+                                            display : 'inline-block',
                                             height : '24px',
-                                            marginTop : '10px',
-                                            color : '#0ca8ac',
-                                            fontWeight : 'bold'
+                                            lineHeight : '24px',
+                                            padding : '0 14px',
+                                            backgroundColor : '#0ca8ac',
+                                            borderRadius : '7px',
+                                            color : '#ffffff',
                                         }}>
-                                            {`"Dev"`}
-                                        </StyledContentsParagraph>
+                                            {`Dev`}
+                                        </StyledContentsSpan>
                                     </StyledWrapper>
                                 </StyledLayoutGridItem>
                             </StyledLayoutGrid>
@@ -737,7 +739,7 @@ export function Home() {
                     </StyledLayoutFlexItem>
                     <StyledLayoutFlexItem>
                         <StyledWrapper $styled={{
-                            borderBottom : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
+                            borderTop : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
                         }}>
                             <StyledLayoutGrid $styled={{
                                 gridTemplateColumns : '72% 28%',
@@ -797,15 +799,18 @@ export function Home() {
                                     </StyledWrapper>
                                 </StyledLayoutGridItem>
                                 <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
+                                    <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
+                                        <StyledContentsSpan $styled={{
+                                            display : 'inline-block',
                                             height : '24px',
-                                            marginTop : '10px',
-                                            color : '#0ca8ac',
-                                            fontWeight : 'bold'
+                                            lineHeight : '24px',
+                                            padding : '0 14px',
+                                            backgroundColor : '#0ca8ac',
+                                            borderRadius : '7px',
+                                            color : '#ffffff',
                                         }}>
-                                            {`"Dev"`}
-                                        </StyledContentsParagraph>
+                                            {`Dev`}
+                                        </StyledContentsSpan>
                                     </StyledWrapper>
                                 </StyledLayoutGridItem>
                             </StyledLayoutGrid>
@@ -813,7 +818,7 @@ export function Home() {
                     </StyledLayoutFlexItem>
                     <StyledLayoutFlexItem>
                         <StyledWrapper $styled={{
-                            padding : '20px 10px 2px 10px'
+                            borderTop : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
                         }}>
                             <StyledLayoutGrid $styled={{
                                 gridTemplateColumns : '72% 28%',
@@ -873,15 +878,18 @@ export function Home() {
                                     </StyledWrapper>
                                 </StyledLayoutGridItem>
                                 <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
+                                    <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
+                                        <StyledContentsSpan $styled={{
+                                            display : 'inline-block',
                                             height : '24px',
-                                            marginTop : '10px',
-                                            color : '#0ca8ac',
-                                            fontWeight : 'bold'
+                                            lineHeight : '24px',
+                                            padding : '0 14px',
+                                            backgroundColor : '#0ca8ac',
+                                            borderRadius : '7px',
+                                            color : '#ffffff',
                                         }}>
-                                            {`"Dev"`}
-                                        </StyledContentsParagraph>
+                                            {`Dev`}
+                                        </StyledContentsSpan>
                                     </StyledWrapper>
                                 </StyledLayoutGridItem>
                             </StyledLayoutGrid>
@@ -892,7 +900,7 @@ export function Home() {
             {/* -- 최근작성한 내용 */}
 
             {/* ++ footer */}
-            <StyledWrapper $styled={{ margin : '40px 0 0 0' }}>
+            <StyledWrapper $styled={{ margin : '120px 0 0 0' }}>
                 <StyledContents $styled={{ height : '120px', borderTop : '1px solid #e6e6e6' }}>
                     <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'flex-end' }}>
                         <StyledLayoutFlexItem>

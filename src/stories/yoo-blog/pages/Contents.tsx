@@ -2,7 +2,7 @@ import { StyledLayoutFlex, StyledLayoutFlexItem } from "@/design-system/module/L
 import { StyledWrapper } from "@/design-system/module/Wrapper";
 import {
     StyledContents,
-    StyledContentsAnchor,
+    StyledContentsAnchor, StyledContentsButton,
     StyledContentsParagraph,
     StyledContentsSpan
 } from "@/design-system/module/Contents";
@@ -11,6 +11,7 @@ import { Menu } from "styled-icons/remix-fill";
 import { PaperPlane } from "styled-icons/evaicons-solid";
 import { Edit } from "styled-icons/boxicons-solid";
 import { isMobile } from "@/design-system/MediaQuery";
+import {Copy} from "@styled-icons/boxicons-regular";
 
 
 export function Contents() {
@@ -194,13 +195,41 @@ export function Contents() {
                             </StyledContents>
                         </StyledWrapper>
 
-                        <StyledWrapper>
+                        <StyledWrapper
+                            $styled={{ margin : '0 0 24px 0' }}
+                            $styledMobile={{ margin : '0 0 14px 0' }}
+                        >
+                            <StyledContentsSpan $styled={{
+                                display : 'inline-block',
+                                height : '24px',
+                                lineHeight : '24px',
+                                padding : '0 14px',
+                                backgroundColor : '#0ca8ac',
+                                borderRadius : '7px',
+                                color : '#ffffff',
+                            }}>
+                                {`Dev`}
+                            </StyledContentsSpan>
+                        </StyledWrapper>
+
+                        <StyledWrapper
+                            $styled={{ margin : '0 0 24px 0' }}
+                            $styledMobile={{ margin : '0 0 14px 0' }}
+                        >
                             <StyledContentsParagraph
                                 $styled={{
-                                    height : '24px',
+                                    width : '680px',
+                                    height : 'auto',
+                                    fontSize : '2rem'
                                 }}
+                                $styledMobile={{
+                                    width : '100%',
+                                    height : 'auto',
+                                    fontSize : '1.4rem'
+                                }}
+                                as={'h1'}
                             >
-                                {`"개발"`}
+                                useEffect에 대해 자세히 알아보자. 생명주기를 위해 무엇을 신경써야할까?
                             </StyledContentsParagraph>
                         </StyledWrapper>
 
@@ -211,25 +240,80 @@ export function Contents() {
                             <StyledContentsParagraph
                                 $styled={{
                                     width : '680px',
-                                    height : '152px',
-                                    fontSize : '2.4rem',
-                                    fontWeight : 'bold'
+                                    height : 'auto',
+                                    fontSize : '1.2rem',
+                                    fontWeight : 'normal',
+                                    color : '#6B6B6B'
                                 }}
                                 $styledMobile={{
                                     width : '100%',
-                                    height : '130px',
-                                    fontSize : '1.6rem',
-                                    fontWeight : 'bold'
+                                    height : 'auto',
+                                    fontSize : '1.1rem',
+                                    fontWeight : 'normal',
+                                    color : '#6B6B6B'
                                 }}
-                                as={'h1'}
+                                as={'h2'}
                             >
                                 useEffect에 대해 자세히 알아보자. 생명주기를 위해 무엇을 신경써야할까? useEffect에 대해 자세히 알아보자. 생명주기를 위해 무엇을 신경써야할까?
                             </StyledContentsParagraph>
                         </StyledWrapper>
 
 
-                        <StyledWrapper $styled={{ margin : '32px 0 0 0' }}>
+                        <StyledWrapper $styled={{
+                            margin : '32px 0 0 0',
+                            borderTop : '1px solid #e6e6e6',
+                            borderBottom : '1px solid #e6e6e6'
+                        }}>
+                            <StyledContents $styled={{ height : '49px' }}>
+                                <StyledLayoutFlex>
 
+                                    <StyledLayoutFlexItem $styled={{ flex : '0 0 50%' }}>
+                                        <StyledLayoutFlex>
+                                            <StyledLayoutFlexItem>
+                                                <StyledWrapper $styled={{
+                                                    padding : '0 10px'
+                                                }}>
+                                                    <StyledContentsParagraph
+                                                        $styled={{
+                                                            width : 'auto',
+                                                            height : '50px',
+                                                            lineHeight : '50px',
+                                                            color : '#6B6B6B'
+                                                        }}
+                                                    >
+                                                        {`Sep. 19. 22`}
+                                                    </StyledContentsParagraph>
+                                                </StyledWrapper>
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>
+                                    </StyledLayoutFlexItem>
+
+
+                                    <StyledLayoutFlexItem $styled={{ flex : '0 0 50%' }}>
+                                        <StyledLayoutFlex $styled={{ flexDirection : 'row-reverse' }}>
+                                            <StyledLayoutFlexItem>
+                                                <StyledWrapper $styled={{
+                                                    padding : '14px 10px 14px 10px',
+                                                    width : '42px',
+                                                    height : '50px'
+                                                }}>
+                                                    <StyledContentsButton
+                                                        $styled={{
+                                                            width : '100%',
+                                                            height : '100%',
+                                                            color : '#6B6B6B',
+                                                            cursor : 'pointer',
+                                                        }}
+                                                    >
+                                                        <StyledContentsIconCopy />
+                                                    </StyledContentsButton>
+                                                </StyledWrapper>
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>
+                                    </StyledLayoutFlexItem>
+
+                                </StyledLayoutFlex>
+                            </StyledContents>
                         </StyledWrapper>
                     </StyledWrapper>
                 </StyledLayoutFlexItem>
@@ -322,5 +406,17 @@ const StyledContentsIconEdit = styled(Edit)`
   ${isMobile} {
     width: 18px;
     height: 18px;
+  }
+`;
+
+const StyledContentsIconCopy = styled(Copy)`
+  display: inherit;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+
+  ${isMobile} {
+    width: 100%;
+    height: 100%;
   }
 `;

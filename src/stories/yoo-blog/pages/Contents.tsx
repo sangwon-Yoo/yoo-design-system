@@ -1,9 +1,8 @@
 import { StyledLayoutFlex, StyledLayoutFlexItem } from "@/design-system/module/Layout";
 import { StyledWrapper } from "@/design-system/module/Wrapper";
 import {
-    StyledContents,
-    StyledContentsAnchor, StyledContentsButton,
-    StyledContentsParagraph,
+    StyledContents, StyledContentsAnchor,
+    StyledContentsButton, StyledContentsParagraph,
     StyledContentsSpan
 } from "@/design-system/module/Contents";
 import styled from "styled-components";

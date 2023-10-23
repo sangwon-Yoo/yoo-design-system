@@ -11,9 +11,28 @@ import { PaperPlane } from "styled-icons/evaicons-solid";
 import { Copy } from "styled-icons/boxicons-regular";
 import { Edit } from "styled-icons/boxicons-solid";
 import { isMobile } from "@/design-system/MediaQuery";
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript'
+import typescript from 'highlight.js/lib/languages/typescript'
+import xml from 'highlight.js/lib/languages/xml';
+import css from 'highlight.js/lib/languages/css';
+import 'highlight.js/styles/androidstudio.min.css';
+import { useEffect } from "react";
+
 
 
 export function Contents() {
+
+
+    // Then register the languages you need
+    hljs.registerLanguage('javascript', javascript);
+    hljs.registerLanguage('typescript', typescript);
+    hljs.registerLanguage('xml', xml);
+    hljs.registerLanguage('css', css);
+
+    useEffect(() => {
+        hljs.highlightAll();
+    }, []);
 
     return (
         <>
@@ -181,7 +200,7 @@ export function Contents() {
                     >
                         <StyledWrapper
                             $styled={{ width : '680px', height : '384px', margin : '0 0 36px 0' }}
-                            $styledMobile={{ width : '100%', height : '194px', margin : '0 0 24px 0' }}
+                            $styledMobile={{ width : '100%', height : '194px' }}
                         >
                             <StyledContents $styled={{ width : '100%', height : '100%' }}>
                                 <img src={'/img/contents.jpeg'} alt={'이미지'} style={{
@@ -315,8 +334,9 @@ export function Contents() {
                             </StyledContents>
                         </StyledWrapper>
 
+                        {/* ++ 부제 */}
                         <StyledWrapper
-                            $styled={{ margin : '48px 0 36px 0' }}
+                            $styled={{ margin : '64px 0 48px 0' }}
                         >
                             <StyledContentsParagraph
                                 $styled={{
@@ -339,8 +359,9 @@ export function Contents() {
                             </StyledContentsParagraph>
                         </StyledWrapper>
 
+                        {/* ++ 문단 */}
                         <StyledWrapper
-                            $styled={{ margin : '24px 0' }}
+                            $styled={{ margin : '36px 0' }}
                         >
                             <StyledContentsParagraph
                                 $styled={{
@@ -359,8 +380,9 @@ export function Contents() {
                             </StyledContentsParagraph>
                         </StyledWrapper>
 
+                        {/* ++ 문단(가운데정렬) */}
                         <StyledWrapper
-                            $styled={{ margin : '24px 0' }}
+                            $styled={{ margin : '36px 0' }}
                         >
                             <StyledContentsParagraph
                                 $styled={{
@@ -380,8 +402,9 @@ export function Contents() {
                             </StyledContentsParagraph>
                         </StyledWrapper>
 
+                        {/* ++ 문단 */}
                         <StyledWrapper
-                            $styled={{ margin : '24px 0' }}
+                            $styled={{ margin : '36px 0' }}
                         >
                             <StyledContentsParagraph
                                 $styled={{
@@ -400,8 +423,45 @@ export function Contents() {
                             </StyledContentsParagraph>
                         </StyledWrapper>
 
+
+                        {/* ++ 문단 : 코드블럭 */}
                         <StyledWrapper
-                            $styled={{ margin : '48px 0 36px 0' }}
+                            $styled={{ margin : '36px 0' }}
+                        >
+                            <StyledContents
+                                $styled={{
+                                    width : '680px',
+                                    height : 'auto'
+                                }}
+                                $styledMobile={{
+                                    width : '100%',
+                                    height : 'auto'
+                                }}
+                            >
+                                <pre>
+                                    <code dangerouslySetInnerHTML={{
+                                        __html : hljs.highlight(`async function APICalc({design, REQ_info}: APICalcProps): Promise<ProductCalcOutput> {
+
+    const reqURI: string = '/calculate/v1/default';
+
+    return await APIProduct<ProductCalcOutput>(reqURI, {
+        method: 'POST',
+        body: JSON.stringify(designToCalcInput(design, REQ_info)),
+        headers: {
+            'Content-Type' : 'application/json',
+        }
+    });
+}`,
+                                            { language : 'typescript' }
+                                        ).value
+                                    }} />
+                                </pre>
+                            </StyledContents>
+                        </StyledWrapper>
+
+                        {/* ++ 부제 */}
+                        <StyledWrapper
+                            $styled={{ margin : '64px 0 48px 0' }}
                         >
                             <StyledContentsParagraph
                                 $styled={{
@@ -424,8 +484,27 @@ export function Contents() {
                             </StyledContentsParagraph>
                         </StyledWrapper>
 
+                        {/* ++ 문단(이미지) */}
                         <StyledWrapper
-                            $styled={{ margin : '24px 0' }}
+                            $styled={{ margin : '0 0 36px 0' }}
+                        >
+                            <StyledContents
+                                $styled={{ width : '680px', height : 'auto' }}
+                                $styledMobile={{ width : '100%', height : 'auto' }}
+                            >
+                                <img src={'/img/contents.jpeg'} alt={'이미지'} style={{
+                                    height : 'auto',
+                                    width : '100%',
+                                    objectFit : 'cover',
+                                    borderRadius : '2px',
+                                    boxShadow : '1px 1px 1px rgba(0,0,0,0.2)'
+                                }} />
+                            </StyledContents>
+                        </StyledWrapper>
+
+                        {/* ++ 문단 */}
+                        <StyledWrapper
+                            $styled={{ margin : '36px 0' }}
                         >
                             <StyledContentsParagraph
                                 $styled={{

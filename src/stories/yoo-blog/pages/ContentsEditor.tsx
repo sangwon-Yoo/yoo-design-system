@@ -1,6 +1,11 @@
 import { StyledLayoutFlex, StyledLayoutFlexItem } from "@/design-system/module/Layout";
 import { StyledWrapper } from "@/design-system/module/Wrapper";
-import { StyledContents, StyledContentsAnchor, StyledContentsSpan } from "@/design-system/module/Contents";
+import {
+    StyledContents,
+    StyledContentsAnchor, StyledContentsButton,
+    StyledContentsParagraph,
+    StyledContentsSpan
+} from "@/design-system/module/Contents";
 import styled from "styled-components";
 import { Menu } from "styled-icons/remix-fill";
 import { PaperPlane } from "styled-icons/evaicons-solid";
@@ -162,50 +167,46 @@ export function ContentsEditor() {
                 </StyledContents>
             </StyledWrapper>
 
+            <StyledLayoutFlex
+                $styled={{ flexDirection : 'column', alignItems : 'center' }}
+                $styledMobile={{ flexDirection : 'column', alignItems : 'stretch' }}
+            >
+                <StyledLayoutFlexItem
+                    $styled={{ flex : '0 0 auto' }}
+                    $styledMobile={{ flex : '0 0 auto' }}
+                >
+                    <StyledWrapper
+                        $styled={{ margin : '120px 24px 36px 24px' }}
+                        $styledMobile={{ margin : '80px 24px 36px 24px' }}
+                    >
 
-            <StyledContents $styled={{ width : '100%', height : '720px' }}>
-                <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'center' }}>
-                    <StyledWrapper $styled={{ textAlign : 'center' }}>
-                        <StyledContentsAnchor $styled={{
-                            display : 'inline-block',
-                            width : '316px',
-                            height : '38px',
-                            lineHeight : '36px',
-                            fontSize : '1rem',
-                            margin : '4px',
-                            border : '1px solid #bdc3c7',
-                            borderRadius : '4px',
-                            color : '#292929',
-                            cursor : 'pointer',
-                            transition : 'background-color .12s ease',
-                            hover : {
-                                color : '#292929',
-                                backgroundColor : '#f2f3f5'
-                            }
-                        }}>
-                            <StyledWrapper $styled={{ margin : '2px' }}>
-                                <StyledContents $styled={{ height : '32px', lineHeight : '32px' }}>
-                                    <img src={'/img/googleLogo.png'} style={{
-                                        display: 'inline-block',
-                                        width : '32px',
-                                        height : '32px',
-                                        verticalAlign : 'top'
-                                    }} />
-                                    <StyledContentsSpan $styled={{
-                                        display : 'inline-block',
-                                        height : '32px',
-                                        verticalAlign : 'top'
-                                    }}>
-                                        {`구글로 로그인`}
-                                    </StyledContentsSpan>
-                                </StyledContents>
-                            </StyledWrapper>
-                        </StyledContentsAnchor>
+
+                        <StyledWrapper
+                            $styled={{ margin : '0 0 24px 0' }}
+                            $styledMobile={{ margin : '0 0 14px 0' }}
+                        >
+                            <StyledContentsSpan $styled={{
+                                display : 'inline-block',
+                                height : '24px',
+                                lineHeight : '24px',
+                                padding : '0 14px',
+                                backgroundColor : '#0ca8ac',
+                                borderRadius : '7px',
+                                color : '#ffffff',
+                            }}>
+                                {`Dev`}
+                            </StyledContentsSpan>
+                        </StyledWrapper>
+
+
+
+
                     </StyledWrapper>
-                </StyledLayoutFlex>
-            </StyledContents>
+                </StyledLayoutFlexItem>
+            </StyledLayoutFlex>
 
-            <StyledWrapper $styled={{ position : 'fixed', width : '100%', bottom : '0', margin : '40px 0 0 0' }}>
+            {/* ++ footer */}
+            <StyledWrapper $styled={{ margin : '40px 0 0 0' }}>
                 <StyledContents $styled={{ height : '120px', borderTop : '1px solid #e6e6e6' }}>
                     <StyledLayoutFlex $styled={{ justifyContent : 'center', alignItems : 'flex-end' }}>
                         <StyledLayoutFlexItem>
@@ -253,6 +254,7 @@ export function ContentsEditor() {
                     </StyledLayoutFlex>
                 </StyledContents>
             </StyledWrapper>
+            {/* -- footer */}
         </>
     );
 }

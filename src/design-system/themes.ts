@@ -3,6 +3,7 @@ const YooBlogTheme: DefaultTheme = {
     color: {
         black : '#292929',
         black2 : '#6B6B6B',
+        backgroundBlack : '#282c34',
         white : '#ffffff',
         gray1 : '#ececeb',
         gray2 : '#e6e6e6',

@@ -29,6 +29,10 @@ export const GlobalStyle = createGlobalStyle`
   // 6. Remove built-in form typography styles
   input, button, textarea, select {
     font: inherit;
+    border: none;
+    background-color: unset;
+    outline: none;
+    padding: 0;
   }
   
   // 7. Avoid text overflows

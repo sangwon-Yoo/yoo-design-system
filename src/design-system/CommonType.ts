@@ -19,4 +19,10 @@ export type CSSCursor = 'help' | 'wait' | 'crosshair' | 'not-allowed' | 'zoom-in
 export type Hovering = {
     color?: string;
     backgroundColor?: string;
+    border?: string;
+}
+export type FocusingVisible = {
+    border?: string;
+    borderBottom?: string;
+    outline?: string;
 }

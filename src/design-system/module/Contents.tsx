@@ -3,7 +3,7 @@ import {
     CSSCursor, CSSDisplay, CSSFontWeight,
     CSSOverflow, CSSPosition, CSSTextAlign,
     CSSTextOverflow, CSSVerticalAlign, CSSWhiteSpace,
-    Hovering, StyledProps
+    FocusingVisible, Hovering, StyledProps
 } from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
 
@@ -17,6 +17,7 @@ type StyledContentsProps = StyledProps<{
     display?: CSSDisplay;
     width?: string;
     height: string;
+    padding?: string;
     lineHeight?: string;
     border?: string;
     borderTop?: string;
@@ -32,6 +33,7 @@ export const StyledContents = styled.div<StyledContentsProps>`
   display: ${props => props.$styled?.display};
   width: ${props => props.$styled?.width || '100%'};
   height: ${props => props.$styled?.height};
+  padding: ${props => props.$styled?.padding};
   line-height: ${props => props.$styled?.lineHeight};
   border: ${props => props.$styled?.border};
   border-top: ${props => props.$styled?.borderTop};
@@ -49,6 +51,7 @@ export const StyledContents = styled.div<StyledContentsProps>`
     display: ${props => props.$styledMobile?.display};
     width: ${props => props.$styledMobile?.width};
     height: ${props => props.$styledMobile?.height};
+    padding: ${props => props.$styledMobile?.padding};
     line-height: ${props => props.$styledMobile?.lineHeight};
     border: ${props => props.$styledMobile?.border};
     border-top: ${props => props.$styledMobile?.borderTop};
@@ -267,7 +270,7 @@ type StyledContentsButtonProps = StyledProps<{
     transition?: string;
     hover?: Hovering;
 }>;
-export const StyledContentsButton = styled.a<StyledContentsButtonProps>`
+export const StyledContentsButton = styled.button<StyledContentsButtonProps>`
   display: ${props => props.$styled?.display};
   height: ${props => props.$styled?.height};
   width: ${props => props.$styled?.width || '100%'};
@@ -307,6 +310,75 @@ export const StyledContentsButton = styled.a<StyledContentsButtonProps>`
     &:hover {
       color: ${props => props.$styledMobile?.hover?.color};
       background-color: ${props => props.$styledMobile?.hover?.backgroundColor};
+    }
+  }
+`;
+
+
+type StyledContentsInputTextProps = StyledProps<{
+    display?: CSSDisplay;
+    height?: string;
+    width?: string;
+    padding?: string;
+    outline?: string;
+    border?: string;
+    borderBottom?: string;
+    borderRadius?: string;
+    backgroundColor?: string;
+    lineHeight?: string;
+    fontSize?: string;
+    fontWeight?: CSSFontWeight;
+    color?: string;
+    transition?: string;
+    focusingVisible?: FocusingVisible;
+    hover?: Hovering;
+}>;
+export const StyledContentsInputText = styled.input<StyledContentsInputTextProps>`
+  display: ${props => props.$styled?.display};
+  height: ${props => props.$styled?.height};
+  width: ${props => props.$styled?.width || '100%'};
+  padding: ${props => props.$styled?.padding};
+  outline: ${props => props.$styled?.outline};
+  border: ${props => props.$styled?.border};
+  border-bottom: ${props => props.$styled?.borderBottom};
+  border-radius: ${props => props.$styled?.borderRadius};
+  background-color: ${props => props.$styled?.backgroundColor};
+  line-height: ${props => props.$styled?.lineHeight};
+  font-size: ${props => props.$styled?.fontSize};
+  font-weight: ${props => props.$styled?.fontWeight};
+  color: ${props => props.$styled?.color};
+  transition: ${props => props.$styled?.transition};
+  &:focus-visible {
+    outline: ${props => props.$styled?.focusingVisible?.outline};
+    border: ${props => props.$styled?.focusingVisible?.border};
+    border-bottom: ${props => props.$styled?.focusingVisible?.borderBottom};
+  }
+  &:hover {
+    border: ${props => props.$styled?.hover?.border};
+  }
+  
+  ${isMobile} {
+    display: ${props => props.$styledMobile?.display};
+    height: ${props => props.$styledMobile?.height};
+    width: ${props => props.$styledMobile?.width};
+    padding: ${props => props.$styledMobile?.padding};
+    outline: ${props => props.$styledMobile?.outline};
+    border: ${props => props.$styledMobile?.border};
+    border-bottom: ${props => props.$styledMobile?.borderBottom};
+    border-radius: ${props => props.$styledMobile?.borderRadius};
+    background-color: ${props => props.$styledMobile?.backgroundColor};
+    line-height: ${props => props.$styledMobile?.lineHeight};
+    font-size: ${props => props.$styledMobile?.fontSize};
+    font-weight: ${props => props.$styledMobile?.fontWeight};
+    color: ${props => props.$styledMobile?.color};
+    transition: ${props => props.$styledMobile?.transition};
+    &:focus-visible {
+      outline: ${props => props.$styledMobile?.focusingVisible?.outline};
+      border: ${props => props.$styledMobile?.focusingVisible?.border};
+      border-bottom: ${props => props.$styledMobile?.focusingVisible?.borderBottom};
+    }
+    &:hover {
+      border: ${props => props.$styledMobile?.hover?.border};
     }
   }
 `;

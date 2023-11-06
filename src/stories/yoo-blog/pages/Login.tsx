@@ -45,8 +45,7 @@ export function Login() {
                                                         $styled={{
                                                             display : 'block',
                                                             width : '36px',
-                                                            height : '36px',
-                                                            cursor : 'pointer',
+                                                            height : '36px'
                                                         }}
                                                         $styledMobile={{
                                                             width : '32px',
@@ -76,7 +75,6 @@ export function Login() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -114,7 +112,6 @@ export function Login() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -140,7 +137,6 @@ export function Login() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -176,7 +172,6 @@ export function Login() {
                             border : '1px solid #bdc3c7',
                             borderRadius : '4px',
                             color : '#292929',
-                            cursor : 'pointer',
                             transition : 'background-color .12s ease',
                             hover : {
                                 color : '#292929',
@@ -220,8 +215,7 @@ export function Login() {
                                         display : 'inline-block',
                                         verticalAlign : 'middle',
                                         width : '36px',
-                                        height : '100%',
-                                        cursor : 'pointer',
+                                        height : '100%'
                                     }}
                                 >
                                     <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{

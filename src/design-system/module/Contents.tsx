@@ -220,7 +220,7 @@ export const StyledContentsAnchor = styled.a<StyledContentsAnchorProps>`
   vertical-align: ${props => props.$styled?.verticalAlign};
   margin: ${props => props.$styled?.margin};
   padding: ${props => props.$styled?.padding};
-  cursor: ${props => props.$styled?.cursor};
+  cursor: ${props => props.$styled?.cursor || 'pointer'};
   transition: ${props => props.$styled?.transition};
   &:hover {
     color: ${props => props.$styled?.hover?.color};
@@ -284,7 +284,7 @@ export const StyledContentsButton = styled.button<StyledContentsButtonProps>`
   text-align: ${props => props.$styled?.textAlign};
   margin: ${props => props.$styled?.margin};
   padding: ${props => props.$styled?.padding};
-  cursor: ${props => props.$styled?.cursor};
+  cursor: ${props => props.$styled?.cursor || 'pointer'};
   transition: ${props => props.$styled?.transition};
   &:hover {
     color: ${props => props.$styled?.hover?.color};

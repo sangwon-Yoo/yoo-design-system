@@ -56,7 +56,6 @@ export function Home() {
                                                             display : 'block',
                                                             width : '36px',
                                                             height : '36px',
-                                                            cursor : 'pointer',
                                                         }}
                                                         $styledMobile={{
                                                             width : '32px',
@@ -86,7 +85,6 @@ export function Home() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -124,7 +122,6 @@ export function Home() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -150,7 +147,6 @@ export function Home() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -206,7 +202,6 @@ export function Home() {
                                                     display : 'block',
                                                     width : '100%',
                                                     height : '100%',
-                                                    cursor : 'pointer',
                                                 }}
                                             >
                                                 <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
@@ -598,7 +593,6 @@ export function Home() {
                                             borderRadius : '2px',
                                             color : '#ffffff',
                                             backgroundColor : 'transparent',
-                                            cursor : 'pointer',
                                             transition : 'background-color .12s ease',
                                             hover : {
                                                 color : '#292929',
@@ -622,7 +616,6 @@ export function Home() {
                                             borderRadius : '2px',
                                             color : '#ffffff',
                                             backgroundColor : 'transparent',
-                                            cursor : 'pointer',
                                             transition : 'background-color .12s ease',
                                             hover : {
                                                 color : '#292929',
@@ -662,237 +655,243 @@ export function Home() {
                         <StyledWrapper $styled={{
                             borderTop : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
                         }}>
-                            <StyledLayoutGrid $styled={{
-                                gridTemplateColumns : '72% 28%',
-                                gridTemplateAreas :
-                                    '"date date"' +
-                                    '"title img"' +
-                                    '"contents img"' +
-                                    '"category category"'
-                            }}>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'date' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '24px',
-                                            color : '#BDC3C7'
-                                        }}>
-                                            {`Sep. 19. 22`}
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'title' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '36px',
-                                            fontSize : '20px',
-                                            fontWeight : 'bold',
-                                            overflow : 'hidden',
-                                            textOverflow : 'ellipsis',
-                                            whiteSpace : 'nowrap'
-                                        }}>
-                                            {`Ellipsis 를 여러줄에 걸쳐 나타내기 위해서는?`}
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem >
-                                <StyledLayoutGridItem $styled={{ gridArea : 'contents' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '105px',
-                                            overflow: 'hidden',
-                                        }}>
-                                            {
-                                                'grid-template-columns(또는 grid-template-rows)의 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성이에요.\n' +
-                                                '속성 이름이 헷갈린다면 -template- 자리에 – auto-가 들어간다고 생각하세요~\n' +
-                                                '“통제를 벗어난”이 무슨 의미일까요? 아까 이 코드 기억 나시나요?\n' +
-                                                '각 셀마다 최소 100px의 높이를 확보하고, 컨텐츠가 높이 100px을 넘어가면 알아서 자동으로 늘어나도록(auto) 하려고 저 코드를 썼는데, 우리가 만든 예시가 row가 3개였기 때문에 repeat 회수를 3으로 지정해 줬었지요? 그런데 row 개수를 미리 알 수 없는 경우면 어떻게 할까요? 바로 이 grid-auto-rows가 그 해결책입니다'
-                                            }
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'img' }}>
-                                    <StyledWrapper $styled={{ height : '100%', margin : '4px' }}>
-                                        <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
-                                            position : 'absolute',
-                                            height : '100%',
-                                            width : '100%',
-                                            objectFit : 'cover'
-                                        }} />
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
-                                    <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
-                                        <StyledContentsSpan $styled={{
-                                            display : 'inline-block',
-                                            height : '24px',
-                                            lineHeight : '24px',
-                                            padding : '0 14px',
-                                            backgroundColor : '#0ca8ac',
-                                            borderRadius : '7px',
-                                            color : '#ffffff',
-                                        }}>
-                                            {`Dev`}
-                                        </StyledContentsSpan>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                            </StyledLayoutGrid>
+                            <StyledContentsAnchor $styled={{ display : 'block' }}>
+                                <StyledLayoutGrid $styled={{
+                                    gridTemplateColumns : '72% 28%',
+                                    gridTemplateAreas :
+                                        '"date date"' +
+                                        '"title img"' +
+                                        '"contents img"' +
+                                        '"category category"'
+                                }}>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'date' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '24px',
+                                                color : '#BDC3C7'
+                                            }}>
+                                                {`Sep. 19. 22`}
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'title' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '36px',
+                                                fontSize : '20px',
+                                                fontWeight : 'bold',
+                                                overflow : 'hidden',
+                                                textOverflow : 'ellipsis',
+                                                whiteSpace : 'nowrap'
+                                            }}>
+                                                {`Ellipsis 를 여러줄에 걸쳐 나타내기 위해서는?`}
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem >
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'contents' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '105px',
+                                                overflow: 'hidden',
+                                            }}>
+                                                {
+                                                    'grid-template-columns(또는 grid-template-rows)의 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성이에요.\n' +
+                                                    '속성 이름이 헷갈린다면 -template- 자리에 – auto-가 들어간다고 생각하세요~\n' +
+                                                    '“통제를 벗어난”이 무슨 의미일까요? 아까 이 코드 기억 나시나요?\n' +
+                                                    '각 셀마다 최소 100px의 높이를 확보하고, 컨텐츠가 높이 100px을 넘어가면 알아서 자동으로 늘어나도록(auto) 하려고 저 코드를 썼는데, 우리가 만든 예시가 row가 3개였기 때문에 repeat 회수를 3으로 지정해 줬었지요? 그런데 row 개수를 미리 알 수 없는 경우면 어떻게 할까요? 바로 이 grid-auto-rows가 그 해결책입니다'
+                                                }
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'img' }}>
+                                        <StyledWrapper $styled={{ height : '100%', margin : '4px' }}>
+                                            <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
+                                                position : 'absolute',
+                                                height : '100%',
+                                                width : '100%',
+                                                objectFit : 'cover'
+                                            }} />
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
+                                        <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
+                                            <StyledContentsSpan $styled={{
+                                                display : 'inline-block',
+                                                height : '24px',
+                                                lineHeight : '24px',
+                                                padding : '0 14px',
+                                                backgroundColor : '#0ca8ac',
+                                                borderRadius : '7px',
+                                                color : '#ffffff',
+                                            }}>
+                                                {`Dev`}
+                                            </StyledContentsSpan>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                </StyledLayoutGrid>
+                            </StyledContentsAnchor>
                         </StyledWrapper>
                     </StyledLayoutFlexItem>
                     <StyledLayoutFlexItem>
                         <StyledWrapper $styled={{
                             borderTop : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
                         }}>
-                            <StyledLayoutGrid $styled={{
-                                gridTemplateColumns : '72% 28%',
-                                gridTemplateAreas :
-                                    '"date date"' +
-                                    '"title img"' +
-                                    '"contents img"' +
-                                    '"category category"'
-                            }}>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'date' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '24px',
-                                            color : '#BDC3C7'
-                                        }}>
-                                            {`Sep. 19. 22`}
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'title' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '36px',
-                                            fontSize : '20px',
-                                            fontWeight : 'bold',
-                                            overflow : 'hidden',
-                                            textOverflow : 'ellipsis',
-                                            whiteSpace : 'nowrap'
-                                        }}>
-                                            {`Ellipsis 를 여러줄에 걸쳐 나타내기 위해서는?`}
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem >
-                                <StyledLayoutGridItem $styled={{ gridArea : 'contents' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '105px',
-                                            overflow: 'hidden',
-                                        }}>
-                                            {
-                                                'grid-template-columns(또는 grid-template-rows)의 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성이에요.\n' +
-                                                '속성 이름이 헷갈린다면 -template- 자리에 – auto-가 들어간다고 생각하세요~\n' +
-                                                '“통제를 벗어난”이 무슨 의미일까요? 아까 이 코드 기억 나시나요?\n' +
-                                                '각 셀마다 최소 100px의 높이를 확보하고, 컨텐츠가 높이 100px을 넘어가면 알아서 자동으로 늘어나도록(auto) 하려고 저 코드를 썼는데, 우리가 만든 예시가 row가 3개였기 때문에 repeat 회수를 3으로 지정해 줬었지요? 그런데 row 개수를 미리 알 수 없는 경우면 어떻게 할까요? 바로 이 grid-auto-rows가 그 해결책입니다'
-                                            }
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'img' }}>
-                                    <StyledWrapper $styled={{ height : '100%', margin : '4px' }}>
-                                        <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
-                                            position : 'absolute',
-                                            height : '100%',
-                                            width : '100%',
-                                            objectFit : 'cover'
-                                        }} />
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
-                                    <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
-                                        <StyledContentsSpan $styled={{
-                                            display : 'inline-block',
-                                            height : '24px',
-                                            lineHeight : '24px',
-                                            padding : '0 14px',
-                                            backgroundColor : '#0ca8ac',
-                                            borderRadius : '7px',
-                                            color : '#ffffff',
-                                        }}>
-                                            {`Dev`}
-                                        </StyledContentsSpan>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                            </StyledLayoutGrid>
+                            <StyledContentsAnchor $styled={{ display : 'block' }}>
+                                <StyledLayoutGrid $styled={{
+                                    gridTemplateColumns : '72% 28%',
+                                    gridTemplateAreas :
+                                        '"date date"' +
+                                        '"title img"' +
+                                        '"contents img"' +
+                                        '"category category"'
+                                }}>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'date' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '24px',
+                                                color : '#BDC3C7'
+                                            }}>
+                                                {`Sep. 19. 22`}
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'title' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '36px',
+                                                fontSize : '20px',
+                                                fontWeight : 'bold',
+                                                overflow : 'hidden',
+                                                textOverflow : 'ellipsis',
+                                                whiteSpace : 'nowrap'
+                                            }}>
+                                                {`Ellipsis 를 여러줄에 걸쳐 나타내기 위해서는?`}
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem >
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'contents' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '105px',
+                                                overflow: 'hidden',
+                                            }}>
+                                                {
+                                                    'grid-template-columns(또는 grid-template-rows)의 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성이에요.\n' +
+                                                    '속성 이름이 헷갈린다면 -template- 자리에 – auto-가 들어간다고 생각하세요~\n' +
+                                                    '“통제를 벗어난”이 무슨 의미일까요? 아까 이 코드 기억 나시나요?\n' +
+                                                    '각 셀마다 최소 100px의 높이를 확보하고, 컨텐츠가 높이 100px을 넘어가면 알아서 자동으로 늘어나도록(auto) 하려고 저 코드를 썼는데, 우리가 만든 예시가 row가 3개였기 때문에 repeat 회수를 3으로 지정해 줬었지요? 그런데 row 개수를 미리 알 수 없는 경우면 어떻게 할까요? 바로 이 grid-auto-rows가 그 해결책입니다'
+                                                }
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'img' }}>
+                                        <StyledWrapper $styled={{ height : '100%', margin : '4px' }}>
+                                            <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
+                                                position : 'absolute',
+                                                height : '100%',
+                                                width : '100%',
+                                                objectFit : 'cover'
+                                            }} />
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
+                                        <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
+                                            <StyledContentsSpan $styled={{
+                                                display : 'inline-block',
+                                                height : '24px',
+                                                lineHeight : '24px',
+                                                padding : '0 14px',
+                                                backgroundColor : '#0ca8ac',
+                                                borderRadius : '7px',
+                                                color : '#ffffff',
+                                            }}>
+                                                {`Dev`}
+                                            </StyledContentsSpan>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                </StyledLayoutGrid>
+                            </StyledContentsAnchor>
                         </StyledWrapper>
                     </StyledLayoutFlexItem>
                     <StyledLayoutFlexItem>
                         <StyledWrapper $styled={{
                             borderTop : '1px solid #e6e6e6', padding : '20px 10px 2px 10px'
                         }}>
-                            <StyledLayoutGrid $styled={{
-                                gridTemplateColumns : '72% 28%',
-                                gridTemplateAreas :
-                                    '"date date"' +
-                                    '"title img"' +
-                                    '"contents img"' +
-                                    '"category category"'
-                            }}>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'date' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '24px',
-                                            color : '#BDC3C7'
-                                        }}>
-                                            {`Sep. 19. 22`}
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'title' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '36px',
-                                            fontSize : '20px',
-                                            fontWeight : 'bold',
-                                            overflow : 'hidden',
-                                            textOverflow : 'ellipsis',
-                                            whiteSpace : 'nowrap'
-                                        }}>
-                                            {`Ellipsis 를 여러줄에 걸쳐 나타내기 위해서는?`}
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem >
-                                <StyledLayoutGridItem $styled={{ gridArea : 'contents' }}>
-                                    <StyledWrapper $styled={{ padding : '4px' }}>
-                                        <StyledContentsParagraph $styled={{
-                                            height : '105px',
-                                            overflow: 'hidden',
-                                        }}>
-                                            {
-                                                'grid-template-columns(또는 grid-template-rows)의 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성이에요.\n' +
-                                                '속성 이름이 헷갈린다면 -template- 자리에 – auto-가 들어간다고 생각하세요~\n' +
-                                                '“통제를 벗어난”이 무슨 의미일까요? 아까 이 코드 기억 나시나요?\n' +
-                                                '각 셀마다 최소 100px의 높이를 확보하고, 컨텐츠가 높이 100px을 넘어가면 알아서 자동으로 늘어나도록(auto) 하려고 저 코드를 썼는데, 우리가 만든 예시가 row가 3개였기 때문에 repeat 회수를 3으로 지정해 줬었지요? 그런데 row 개수를 미리 알 수 없는 경우면 어떻게 할까요? 바로 이 grid-auto-rows가 그 해결책입니다'
-                                            }
-                                        </StyledContentsParagraph>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'img' }}>
-                                    <StyledWrapper $styled={{ height : '100%', margin : '4px' }}>
-                                        <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
-                                            position : 'absolute',
-                                            height : '100%',
-                                            width : '100%',
-                                            objectFit : 'cover'
-                                        }} />
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                                <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
-                                    <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
-                                        <StyledContentsSpan $styled={{
-                                            display : 'inline-block',
-                                            height : '24px',
-                                            lineHeight : '24px',
-                                            padding : '0 14px',
-                                            backgroundColor : '#0ca8ac',
-                                            borderRadius : '7px',
-                                            color : '#ffffff',
-                                        }}>
-                                            {`Dev`}
-                                        </StyledContentsSpan>
-                                    </StyledWrapper>
-                                </StyledLayoutGridItem>
-                            </StyledLayoutGrid>
+                            <StyledContentsAnchor $styled={{ display : 'block' }}>
+                                <StyledLayoutGrid $styled={{
+                                    gridTemplateColumns : '72% 28%',
+                                    gridTemplateAreas :
+                                        '"date date"' +
+                                        '"title img"' +
+                                        '"contents img"' +
+                                        '"category category"'
+                                }}>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'date' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '24px',
+                                                color : '#BDC3C7'
+                                            }}>
+                                                {`Sep. 19. 22`}
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'title' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '36px',
+                                                fontSize : '20px',
+                                                fontWeight : 'bold',
+                                                overflow : 'hidden',
+                                                textOverflow : 'ellipsis',
+                                                whiteSpace : 'nowrap'
+                                            }}>
+                                                {`Ellipsis 를 여러줄에 걸쳐 나타내기 위해서는?`}
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem >
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'contents' }}>
+                                        <StyledWrapper $styled={{ padding : '4px' }}>
+                                            <StyledContentsParagraph $styled={{
+                                                height : '105px',
+                                                overflow: 'hidden',
+                                            }}>
+                                                {
+                                                    'grid-template-columns(또는 grid-template-rows)의 통제를 벗어난 위치에 있는 트랙의 크기를 지정하는 속성이에요.\n' +
+                                                    '속성 이름이 헷갈린다면 -template- 자리에 – auto-가 들어간다고 생각하세요~\n' +
+                                                    '“통제를 벗어난”이 무슨 의미일까요? 아까 이 코드 기억 나시나요?\n' +
+                                                    '각 셀마다 최소 100px의 높이를 확보하고, 컨텐츠가 높이 100px을 넘어가면 알아서 자동으로 늘어나도록(auto) 하려고 저 코드를 썼는데, 우리가 만든 예시가 row가 3개였기 때문에 repeat 회수를 3으로 지정해 줬었지요? 그런데 row 개수를 미리 알 수 없는 경우면 어떻게 할까요? 바로 이 grid-auto-rows가 그 해결책입니다'
+                                                }
+                                            </StyledContentsParagraph>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'img' }}>
+                                        <StyledWrapper $styled={{ height : '100%', margin : '4px' }}>
+                                            <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{
+                                                position : 'absolute',
+                                                height : '100%',
+                                                width : '100%',
+                                                objectFit : 'cover'
+                                            }} />
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                    <StyledLayoutGridItem $styled={{ gridArea : 'category' }}>
+                                        <StyledWrapper $styled={{ margin : '10px 0 6px 0', padding : '4px' }}>
+                                            <StyledContentsSpan $styled={{
+                                                display : 'inline-block',
+                                                height : '24px',
+                                                lineHeight : '24px',
+                                                padding : '0 14px',
+                                                backgroundColor : '#0ca8ac',
+                                                borderRadius : '7px',
+                                                color : '#ffffff',
+                                            }}>
+                                                {`Dev`}
+                                            </StyledContentsSpan>
+                                        </StyledWrapper>
+                                    </StyledLayoutGridItem>
+                                </StyledLayoutGrid>
+                            </StyledContentsAnchor>
                         </StyledWrapper>
                     </StyledLayoutFlexItem>
                 </StyledLayoutFlex>
@@ -915,8 +914,7 @@ export function Home() {
                                         display : 'inline-block',
                                         verticalAlign : 'middle',
                                         width : '36px',
-                                        height : '100%',
-                                        cursor : 'pointer',
+                                        height : '100%'
                                     }}
                                 >
                                     <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{

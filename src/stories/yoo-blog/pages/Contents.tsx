@@ -69,8 +69,7 @@ export function Contents() {
                                                         $styled={{
                                                             display : 'block',
                                                             width : '36px',
-                                                            height : '36px',
-                                                            cursor : 'pointer',
+                                                            height : '36px'
                                                         }}
                                                         $styledMobile={{
                                                             width : '32px',
@@ -100,7 +99,6 @@ export function Contents() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -138,7 +136,6 @@ export function Contents() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -164,7 +161,6 @@ export function Contents() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -319,8 +315,7 @@ export function Contents() {
                                                         $styled={{
                                                             width : '100%',
                                                             height : '100%',
-                                                            color : '#6B6B6B',
-                                                            cursor : 'pointer',
+                                                            color : '#6B6B6B'
                                                         }}
                                                     >
                                                         <StyledContentsIconCopy />
@@ -545,8 +540,7 @@ export function Contents() {
                                         display : 'inline-block',
                                         verticalAlign : 'middle',
                                         width : '36px',
-                                        height : '100%',
-                                        cursor : 'pointer',
+                                        height : '100%'
                                     }}
                                 >
                                     <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{

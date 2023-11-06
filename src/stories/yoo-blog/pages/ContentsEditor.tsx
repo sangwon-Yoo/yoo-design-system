@@ -55,8 +55,7 @@ export function ContentsEditor() {
                                                         $styled={{
                                                             display : 'block',
                                                             width : '36px',
-                                                            height : '36px',
-                                                            cursor : 'pointer',
+                                                            height : '36px'
                                                         }}
                                                         $styledMobile={{
                                                             width : '32px',
@@ -86,7 +85,6 @@ export function ContentsEditor() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -124,7 +122,6 @@ export function ContentsEditor() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -150,7 +147,6 @@ export function ContentsEditor() {
                                                             display : 'block',
                                                             padding : '7px',
                                                             color : '#0ca8ac',
-                                                            cursor : 'pointer',
                                                             borderRadius : '2px',
                                                             transition : 'background-color .12s ease',
                                                             hover : { backgroundColor : '#ececeb' }
@@ -269,8 +265,7 @@ export function ContentsEditor() {
                                                 $styled={{
                                                     width : '100%',
                                                     height : '100%',
-                                                    color : '#6B6B6B',
-                                                    cursor : 'pointer',
+                                                    color : '#6B6B6B'
                                                 }}
                                             >
                                                 <StyledContentsIconClose />
@@ -351,8 +346,7 @@ export function ContentsEditor() {
                                                 $styled={{
                                                     width : '100%',
                                                     height : '100%',
-                                                    color : '#6B6B6B',
-                                                    cursor : 'pointer',
+                                                    color : '#6B6B6B'
                                                 }}
                                             >
                                                 <StyledContentsIconClose />
@@ -433,8 +427,7 @@ export function ContentsEditor() {
                                                 $styled={{
                                                     width : '100%',
                                                     height : '100%',
-                                                    color : '#6B6B6B',
-                                                    cursor : 'pointer',
+                                                    color : '#6B6B6B'
                                                 }}
                                             >
                                                 <StyledContentsIconClose />
@@ -515,8 +508,7 @@ export function ContentsEditor() {
                                                 $styled={{
                                                     width : '100%',
                                                     height : '100%',
-                                                    color : '#6B6B6B',
-                                                    cursor : 'pointer',
+                                                    color : '#6B6B6B'
                                                 }}
                                             >
                                                 <StyledContentsIconClose />
@@ -566,8 +558,7 @@ export function ContentsEditor() {
                                                         width : '72px',
                                                         height : '40px',
                                                         margin : '0 10px',
-                                                        color : '#6B6B6B',
-                                                        cursor : 'pointer'
+                                                        color : '#6B6B6B'
                                                     }}
                                                 >
                                                     Title
@@ -579,8 +570,7 @@ export function ContentsEditor() {
                                                         width : '72px',
                                                         height : '40px',
                                                         margin : '0 10px',
-                                                        color : '#6B6B6B',
-                                                        cursor : 'pointer'
+                                                        color : '#6B6B6B'
                                                     }}
                                                 >
                                                     Bold
@@ -593,8 +583,7 @@ export function ContentsEditor() {
                                                         height : '40px',
                                                         margin : '0 10px',
                                                         color : '#292929',
-                                                        fontWeight : 'bold',
-                                                        cursor : 'pointer',
+                                                        fontWeight : 'bold'
                                                     }}
                                                 >
                                                     Italic
@@ -606,8 +595,7 @@ export function ContentsEditor() {
                                                         width : '72px',
                                                         height : '40px',
                                                         margin : '0 10px',
-                                                        color : '#6B6B6B',
-                                                        cursor : 'pointer'
+                                                        color : '#6B6B6B'
                                                     }}
                                                 >
                                                     Center
@@ -619,8 +607,7 @@ export function ContentsEditor() {
                                                         width : '72px',
                                                         height : '40px',
                                                         margin : '0 10px',
-                                                        color : '#6B6B6B',
-                                                        cursor : 'pointer'
+                                                        color : '#6B6B6B'
                                                     }}
                                                 >
                                                     Image
@@ -632,8 +619,7 @@ export function ContentsEditor() {
                                                         width : '72px',
                                                         height : '40px',
                                                         margin : '0 10px',
-                                                        color : '#6B6B6B',
-                                                        cursor : 'pointer'
+                                                        color : '#6B6B6B'
                                                     }}
                                                 >
                                                     Code
@@ -674,8 +660,7 @@ export function ContentsEditor() {
                                         display : 'inline-block',
                                         verticalAlign : 'middle',
                                         width : '36px',
-                                        height : '100%',
-                                        cursor : 'pointer',
+                                        height : '100%'
                                     }}
                                 >
                                     <img src={'/img/wonny.jpeg'} alt={'이미지'} style={{

@@ -541,6 +541,118 @@ export function ContentsEditor() {
                             </StyledContents>
                         </StyledWrapper>
 
+                        <StyledWrapper
+                            $styled={{
+                                margin : '0 0 24px 0'
+                            }}
+                            $styledMobile={{
+                                margin : '0 0 14px 0'
+                            }}
+                        >
+                            <StyledLayoutFlex $styled={{ flexDirection : 'column' }}>
+                                <StyledLayoutFlexItem>
+                                    <StyledWrapper $styled={{
+                                        margin : '0 0 4px 0',
+                                        borderRadius : '3px',
+                                        backgroundColor : '#f2f3f5'
+                                    }}>
+                                        <StyledLayoutFlex
+                                            $styled={{ flexWrap : 'wrap' }}
+                                            $styledMobile={{ justifyContent : 'center' }}
+                                        >
+                                            <StyledLayoutFlexItem>
+                                                <StyledContentsButton
+                                                    $styled={{
+                                                        width : '72px',
+                                                        height : '40px',
+                                                        margin : '0 10px',
+                                                        color : '#6B6B6B',
+                                                        cursor : 'pointer'
+                                                    }}
+                                                >
+                                                    Title
+                                                </StyledContentsButton>
+                                            </StyledLayoutFlexItem>
+                                            <StyledLayoutFlexItem>
+                                                <StyledContentsButton
+                                                    $styled={{
+                                                        width : '72px',
+                                                        height : '40px',
+                                                        margin : '0 10px',
+                                                        color : '#6B6B6B',
+                                                        cursor : 'pointer'
+                                                    }}
+                                                >
+                                                    Bold
+                                                </StyledContentsButton>
+                                            </StyledLayoutFlexItem>
+                                            <StyledLayoutFlexItem>
+                                                <StyledContentsButton
+                                                    $styled={{
+                                                        width : '72px',
+                                                        height : '40px',
+                                                        margin : '0 10px',
+                                                        color : '#292929',
+                                                        fontWeight : 'bold',
+                                                        cursor : 'pointer',
+                                                    }}
+                                                >
+                                                    Italic
+                                                </StyledContentsButton>
+                                            </StyledLayoutFlexItem>
+                                            <StyledLayoutFlexItem>
+                                                <StyledContentsButton
+                                                    $styled={{
+                                                        width : '72px',
+                                                        height : '40px',
+                                                        margin : '0 10px',
+                                                        color : '#6B6B6B',
+                                                        cursor : 'pointer'
+                                                    }}
+                                                >
+                                                    Center
+                                                </StyledContentsButton>
+                                            </StyledLayoutFlexItem>
+                                            <StyledLayoutFlexItem>
+                                                <StyledContentsButton
+                                                    $styled={{
+                                                        width : '72px',
+                                                        height : '40px',
+                                                        margin : '0 10px',
+                                                        color : '#6B6B6B',
+                                                        cursor : 'pointer'
+                                                    }}
+                                                >
+                                                    Image
+                                                </StyledContentsButton>
+                                            </StyledLayoutFlexItem>
+                                            <StyledLayoutFlexItem>
+                                                <StyledContentsButton
+                                                    $styled={{
+                                                        width : '72px',
+                                                        height : '40px',
+                                                        margin : '0 10px',
+                                                        color : '#6B6B6B',
+                                                        cursor : 'pointer'
+                                                    }}
+                                                >
+                                                    Code
+                                                </StyledContentsButton>
+                                            </StyledLayoutFlexItem>
+                                        </StyledLayoutFlex>
+                                    </StyledWrapper>
+                                </StyledLayoutFlexItem>
+                                <StyledLayoutFlexItem>
+                                    <StyledContents $styled={{
+                                        height : '630px',
+                                        padding : '20px',
+                                        border : '2.4px solid #0ca8ac',
+                                        borderRadius : '3px',
+                                    }} />
+                                </StyledLayoutFlexItem>
+                            </StyledLayoutFlex>
+                        </StyledWrapper>
+
 
                     </StyledWrapper>
                 </StyledLayoutFlexItem>

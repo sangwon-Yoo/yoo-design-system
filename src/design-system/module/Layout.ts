@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CSSAlignItems, CSSFlexDirection, CSSJustifyContent, StyledProps } from "@/design-system/CommonType";
+import { CSSAlignItems, CSSFlexDirection, CSSFlexWrap, CSSJustifyContent, StyledProps } from "@/design-system/CommonType";
 import { isMobile } from "@/design-system/MediaQuery";
 
 
@@ -11,6 +11,7 @@ type StyledLayoutFlexProps = StyledProps<{
     flexDirection?: CSSFlexDirection;
     justifyContent?: CSSJustifyContent;
     alignItems?: CSSAlignItems;
+    flexWrap?: CSSFlexWrap;
     width?: string;
     height?: string;
 }>;
@@ -19,6 +20,7 @@ export const StyledLayoutFlex = styled.div<StyledLayoutFlexProps>`
   flex-direction: ${props => props.$styled?.flexDirection || 'row'};
   justify-content: ${props => props.$styled?.justifyContent};
   align-items: ${props => props.$styled?.alignItems};
+  flex-wrap: ${props => props.$styled?.flexWrap};
   width: ${props => props.$styled?.width || '100%'};
   height: ${props => props.$styled?.height || '100%'};
   
@@ -26,6 +28,7 @@ export const StyledLayoutFlex = styled.div<StyledLayoutFlexProps>`
     flex-direction: ${props => props.$styledMobile?.flexDirection};
     justify-content: ${props => props.$styledMobile?.justifyContent};
     align-items: ${props => props.$styledMobile?.alignItems};
+    flex-wrap: ${props => props.$styledMobile?.flexWrap};
     width: ${props => props.$styledMobile?.width};
     height: ${props => props.$styledMobile?.height};
   }

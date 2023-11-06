@@ -19,7 +19,9 @@ type StyledWrapperProps = StyledProps<{
     border?: string;
     borderBottom?: string;
     borderTop?: string;
+    borderRadius?: string;
     boxShadow?: string;
+    backgroundColor?: string;
     textAlign?: CSSTextAlign;
     verticalAlign?: CSSVerticalAlign;
     zIndex?: number;
@@ -36,7 +38,9 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
   border: ${props => props.$styled?.border};
   border-bottom: ${props => props.$styled?.borderBottom};
   border-top: ${props => props.$styled?.borderTop};
+  border-radius: ${props => props.$styled?.borderRadius};
   box-shadow: ${props => props.$styled?.boxShadow};
+  background-color: ${props => props.$styled?.backgroundColor};
   text-align: ${props => props.$styled?.textAlign};
   vertical-align: ${props => props.$styled?.verticalAlign};
   z-index: ${props => props.$styled?.zIndex};
@@ -53,7 +57,9 @@ export const StyledWrapper = styled.div<StyledWrapperProps>`
     border: ${props => props.$styledMobile?.border};
     border-bottom: ${props => props.$styledMobile?.borderBottom};
     border-top: ${props => props.$styledMobile?.borderTop};
+    border-radius: ${props => props.$styledMobile?.borderRadius};
     box-shadow: ${props => props.$styledMobile?.boxShadow};
+    background-color: ${props => props.$styledMobile?.backgroundColor};
     text-align: ${props => props.$styledMobile?.textAlign};
     vertical-align: ${props => props.$styledMobile?.verticalAlign};
     z-index: ${props => props.$styledMobile?.zIndex};

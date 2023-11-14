@@ -29,6 +29,10 @@ export const GlobalStyle = createGlobalStyle`
   // 6. Remove built-in form typography styles
   input, button, textarea, select {
     font: inherit;
+    border: none;
+    background-color: unset;
+    outline: none;
+    padding: 0;
   }
   
   // 7. Avoid text overflows
@@ -59,11 +63,6 @@ export const GlobalStyle = createGlobalStyle`
     */
     font-family: NotoSansKR-Regular; //자식들은 inherit 이 활성화되어서 상속 받는다.
     font-size: 14px; //자식들은 inherit 이 활성화되어서 상속 받는다.
-  }
-
-  body {
-    height: 100%;
-    width: 100%;
   }
   /* -- Global */
   

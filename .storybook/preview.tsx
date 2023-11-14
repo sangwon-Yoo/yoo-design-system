@@ -1,6 +1,8 @@
 import type { Preview } from '@storybook/react';
-import { GlobalStyle } from '@/design-system/GlobalStyle';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
+import { GlobalStyle } from "../src/design-system/GlobalStyle";
+import { ThemeProvider } from "styled-components";
+import { YooBlogTheme } from "../src/design-system/themes";
 
 const preview: Preview = {
   parameters: {
@@ -15,7 +17,12 @@ const preview: Preview = {
   decorators: [
     // Adds global styles and theme switching support.
     withThemeFromJSXProvider({
-      GlobalStyle,
+      GlobalStyles : GlobalStyle,
+      themes : {
+        lightTheme : YooBlogTheme
+      },
+      defaultTheme : 'lightTheme',
+      Provider : ThemeProvider
     }),
   ],
 };

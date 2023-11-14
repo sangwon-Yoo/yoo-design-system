@@ -11,6 +11,6 @@ const meta = {
 } satisfies Meta<typeof Home>
 export default meta;
 
-export const HomePC: StoryObj<typeof Home> = {
+export const PageHome: StoryObj<typeof Home> = {
     render: () => <Home />
 };
